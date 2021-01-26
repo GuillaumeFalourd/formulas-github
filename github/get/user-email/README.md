@@ -12,4 +12,4 @@ This formula return the EMAIL associated to a Github account (if available).
 
 ## Demo
 
-<img class="special-img-class" src="/docs/img/rit-github-get-user.png"/>
+<img class="special-img-class" src="/docs/img/rit-github-get-user-email.png"/>

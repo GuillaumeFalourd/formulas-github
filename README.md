@@ -10,6 +10,15 @@ This repository contains Ritchie formulas which can be executed by the [ritchie-
 
 - [Gitbook](https://docs.ritchiecli.io)
 
+## Formulas available on this repository
+
+- [Create Github Profile](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/create/profile)
+- [Create Github Repository](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/create/repo)
+- [Create Github Release](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/generate/release)
+- [Get Github Repo Details](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/get/repo)
+- [Get Github User Details](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/get/user)
+- [Get Github User Email](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/get/user-email)
+
 ## Use Formulas
 
 To import this repository, you need [Ritchie CLI installed](https://docs.ritchiecli.io/getting-started/installation)
@@ -31,3 +40,4 @@ Finally, you can check if the repository has been imported correctly by executin
 and commit your implementation: `git commit -m '<commit_message>`
 5. Push your branch: `git push origin <project_name>/<location>`
 6. Open a pull request on the repository for analysis.
+
