@@ -1,11 +1,13 @@
-# Ritchie Formula
+# Ritchie create Github profile formula
 
-## command
+## Command
 
 ```bash
 rit github create profile
 ```
 
-## description
+## How to use ?
 
-description of formula
+![Command](/docs/img/rit-github-create-profile-command.png)
+
+![Result](/docs/img/rit-github-create-profile-result.png)
