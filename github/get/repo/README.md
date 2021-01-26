@@ -1,11 +1,17 @@
 # Ritchie Formula
 
-## command
+## Command
 
 ```bash
-rit github get repo-insights
+rit github get repo
 ```
 
-## description
+## Description
 
-description of formula
+This formula return insights from the informed repository such as:
+- Views
+- Contributions
+- Forks
+- Stars
+
+It can also return contributors details.
