@@ -15,9 +15,7 @@ def Run(username, name, job, company):
     mdFile = MdUtils(file_name='README', title=title)
     
     mdFile.new_paragraph(resume.format(name, job, company))
-    mdFile.new_paragraph(line)
     mdFile.new_paragraph(visitors.format(username, username))
-    mdFile.new_paragraph(line)
     mdFile.new_paragraph(languages.format(username))
     mdFile.new_paragraph(statistics.format(username))
     mdFile.new_paragraph(contributions.format(username))
