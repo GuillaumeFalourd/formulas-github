@@ -5,7 +5,7 @@ from mdutils import Html
 title = '<h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Hello World ! </h1>'
 resume = 'My name is {}. I work as a {} at {}.'
 
-visitors = '![](http://estruyf-github.azurewebsites.net/api/VisitorHit?user={}&repo={}&countColorcountColor) '
+visitors = '![](http://estruyf-github.azurewebsites.net/api/VisitorHit?user={}&repo={}&countColorcountColor)'
 languages = '![Github Languages](https://github-readme-stats.vercel.app/api/top-langs/?username={}&layout=compact&count_private=true)'
 statistics = '![Github Statistics](https://github-readme-stats.vercel.app/api/?username={}&count_private=true&show_icons=true)'
 contributions = '![Github Contributions](https://github-readme-streak-stats.herokuapp.com/?user={}&hide_border=true)'
