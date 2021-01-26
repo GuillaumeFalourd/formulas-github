@@ -1,0 +1,29 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-python3-builder",
+  "inputs": [
+    {
+      "name": "rit_git_token",
+      "type": "CREDENTIAL_GITHUB_TOKEN"
+    },
+    {
+      "name": "rit_git_user",
+      "type": "CREDENTIAL_GITHUB_USERNAME"
+    },
+    {
+      "label": "Repository name:",
+      "name": "rit_git_repo",
+      "tutorial": "Ex: ritchie-formulas",
+      "type": "text"
+    },
+    {
+      "default": "No",
+      "label": "Is it a private repo?",
+      "name": "rit_repo_privacy",
+      "type": "text",
+      "items": [
+        "Yes",
+        "No"
+      ]
+    }
+  ]
+}

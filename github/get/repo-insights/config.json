@@ -1,0 +1,28 @@
+{
+  "dockerImageBuilder": "cimg/python:3.8",
+  "inputs": [
+    {
+      "name": "git_username",
+      "type": "CREDENTIAL_GITHUB_USERNAME"
+    },
+    {
+      "name": "git_token",
+      "type": "CREDENTIAL_GITHUB_TOKEN"
+    },
+    {
+      "label": "Github repository URL to observe",
+      "name": "rit_github_repository",
+      "type": "text",
+      "tutorial":"Example: https://github.com/GuillaumeFalourd/formulas-insights"
+    },
+    {
+      "label": "Do you want contribution details?",
+      "name": "contribution",
+      "type": "text",
+      "items": [
+        "yes",
+        "no"
+      ]
+    }
+  ]
+}

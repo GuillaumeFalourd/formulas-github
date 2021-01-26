@@ -1,0 +1,22 @@
+{
+  "dockerImageBuilder": "cimg/python:3.8",
+  "inputs": [
+    {
+      "name": "git_username",
+      "type": "CREDENTIAL_GITHUB_USERNAME"
+    },
+    {
+      "name": "git_token",
+      "type": "CREDENTIAL_GITHUB_TOKEN"
+    },
+    {
+      "label": "Do you want contribution details?",
+      "name": "contribution",
+      "type": "text",
+      "items": [
+        "yes",
+        "no"
+      ]
+    }
+  ]
+}

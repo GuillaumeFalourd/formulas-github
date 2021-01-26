@@ -1,0 +1,27 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-python3-builder",
+  "inputs": [
+    {
+      "name": "github_username",
+      "type": "CREDENTIAL_GITHUB_USERNAME"
+    },
+    {
+      "label": "Full Name: ",
+      "name": "rit_name",
+      "required": true,
+      "type": "text"
+    },
+    {
+      "label": "Current Job: ",
+      "name": "rit_job",
+      "required": true,
+      "type": "text"
+    },
+    {
+      "label": "Current Company: ",
+      "name": "rit_company",
+      "required": true,
+      "type": "text"
+    }
+  ]
+}
