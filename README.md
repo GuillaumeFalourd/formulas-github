@@ -1,4 +1,4 @@
-# Ritchie Formula Repo
+# Ritchie Formulas Github
 
 ![Rit banner](/docs/img/ritchie-banner.png)
 
@@ -6,34 +6,21 @@
 
 [Contribute to the Ritchie community](https://github.com/ZupIT/ritchie-formulas/blob/master/CONTRIBUTING.md)
 
-This repository contains rit formulas which can be executed by the [ritchie-cli](https://github.com/ZupIT/ritchie-cli).
+This repository contains Ritchie formulas which can be executed by the [ritchie-cli](https://github.com/ZupIT/ritchie-cli).
 
 - [Gitbook](https://docs.ritchiecli.io)
 
 ## Use Formulas
 
-```bash
- rit add repo
- Select your provider:
-  > Github
-    Gilab
- Repository name: {{some_repo_name}}
- Repository URL: {{this_repo_url}}
- Is a private repository?
-    no
-  > yes
- Personal access tokens: {{git_personal_token}}
- Select a tag version:
-  > 1.0.1
-    1.0.0
- Set the priority: 2
-```
+To import this repository, you need [Ritchie CLI installed](https://docs.ritchiecli.io/getting-started/installation)
 
-## Build and test formulas locally
+Then, you can use the `rit add repo` command manually, or execute the command line below directly on your terminal:
 
 ```bash
- rit build formula
+echo '{"provider":"Github", "name":"formulas-training", "url":"https://github.com/GuillaumeFalourd/formulas-github", "priority":1}' | rit add repo --stdin
 ```
+
+Finally, you can check if the repository has been imported correctly by executing the `rit list repo` command.
 
 ## Contribute to the repository with your formulas
 
