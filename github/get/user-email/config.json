@@ -10,7 +10,7 @@
       "type": "CREDENTIAL_GITHUB_TOKEN"
     },
     {
-      "label": "Which user do you want the email?",
+      "label": "Which Github user do you want the email?",
       "name": "rit_user_login",
       "type": "text",
       "cache": {
