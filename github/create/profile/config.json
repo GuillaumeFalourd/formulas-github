@@ -27,14 +27,14 @@
     },
     {
       "label": "Want to add social network links?",
-      "name": "rit_social-networks",
+      "name": "rit_social_networks",
       "type": "text",
       "default": "no",
       "items": ["yes", "no"]
     },
     {
       "condition": {
-            "variable": "rit_social",
+            "variable": "rit_social_networks",
             "operator": "==",
             "value": "yes"
       },
@@ -57,7 +57,7 @@
     },
     {
       "condition": {
-            "variable": "rit_social",
+            "variable": "rit_social_networks",
             "operator": "==",
             "value": "yes"
       },
@@ -80,7 +80,7 @@
     },
     {
       "condition": {
-            "variable": "rit_social",
+            "variable": "rit_social_networks",
             "operator": "==",
             "value": "yes"
       },
