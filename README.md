@@ -9,6 +9,7 @@
 This repository contains Ritchie formulas which can be executed by the [ritchie-cli](https://github.com/ZupIT/ritchie-cli).
 
 - [Gitbook](https://docs.ritchiecli.io)
+- [Step by step to create a Github profile with Ritchie CLI](https://dev.to/guifalourd/step-by-step-to-create-a-readme-for-your-github-profile-1i0g)
 
 ## Formulas available on this repository
 
