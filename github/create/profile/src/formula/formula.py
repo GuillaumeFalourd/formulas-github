@@ -27,7 +27,7 @@ def Run(username, name, job, company, linkedin_url, twitter_url, medium_url):
     mdFile.new_paragraph(statistics.format(username))
     mdFile.new_paragraph(contributions.format(username))
     
-    if all(url is not None for url in [linkedin_url, twitter_url, medium_url]):
+    if linkedin_url is not None or twitter_url is not None or medium_url is not None:
         mdFile.new_paragraph(paragraph_init)
         if linkedin_url is not None:
             mdFile.new_paragraph(linkedin.format(linkedin_url))
