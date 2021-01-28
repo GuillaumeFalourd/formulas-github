@@ -25,7 +25,7 @@ To import this repository, you need [Ritchie CLI installed](https://docs.ritchie
 Then, you can use the `rit add repo` command manually, or execute the command line below directly on your terminal:
 
 ```bash
-echo '{"provider":"Github", "name":"formulas-github", "url":"https://github.com/GuillaumeFalourd/formulas-github", "version":"1.2.3", "priority":1}' | rit add repo --stdin
+echo '{"provider":"Github", "name":"formulas-github", "version":"1.2.3", "url":"https://github.com/GuillaumeFalourd/formulas-github", "priority":1}' | rit add repo --stdin
 ```
 
 Finally, you can check if the repository has been imported correctly by executing the `rit list repo` command.
