@@ -23,21 +23,21 @@ def Run(username, name, job, company, linkedin_url, twitter_url, medium_url):
     mdFile.new_paragraph(resume.format(name, job, company))
     mdFile.new_paragraph(visitors.format(username, username))
     
-    mdFile.new_header(level=3, title='Analytics ⚙️')
+    mdFile.new_header(level=3, title='Analytics')
     mdFile.new_paragraph(languages.format(username))
     mdFile.new_paragraph(statistics.format(username))
     mdFile.new_paragraph(contributions.format(username))
     
-    
-    mdFile.new_header(level=3, title='Let\'s connect ? 🤝')
-    mdFile.new_paragraph(paragraph_init)
-    if linkedin_url is not None:
-        mdFile.new_paragraph(linkedin.format(linkedin_url))
-    if twitter_url is not None:
-        mdFile.new_paragraph(twitter.format(twitter_url))
-    if medium_url is not None:
-        mdFile.new_paragraph(medium.format(medium_url))
-    mdFile.new_paragraph(paragraph_end)
+    if all(url is not None for url in [linkedin_url, twitter_url, medium_url]):
+        mdFile.new_header(level=3, title='Let\'s connect?')
+        mdFile.new_paragraph(paragraph_init)
+        if linkedin_url is not None:
+            mdFile.new_paragraph(linkedin.format(linkedin_url))
+        if twitter_url is not None:
+            mdFile.new_paragraph(twitter.format(twitter_url))
+        if medium_url is not None:
+            mdFile.new_paragraph(medium.format(medium_url))
+        mdFile.new_paragraph(paragraph_end)
     
     mdFile.create_md_file()
     
