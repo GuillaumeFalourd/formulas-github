@@ -7,7 +7,7 @@
 ## Command
 
 ```bash
-rit python github create repo
+rit github create repo
 ```
 
 ## Description
