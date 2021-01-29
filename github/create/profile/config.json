@@ -38,68 +38,17 @@
             "operator": "==",
             "value": "yes"
       },
-      "label": "Add Linkedin Account ?",
-      "name": "rit_linkedin_account",
-      "type": "text",
-      "default": "no",
-      "items": ["yes", "no"]
-    },
-    {
-      "condition": {
-            "variable": "rit_linkedin_account",
-            "operator": "==",
-            "value": "yes"
-      },
-      "label": "Linkedin Account URL:",
-      "name": "rit_linkedin_url",
-      "type": "text",
-      "tutorial": "Ex: https://www.linkedin.com/in/dennisritchie/"
-    },
-    {
-      "condition": {
-            "variable": "rit_social_networks",
-            "operator": "==",
-            "value": "yes"
-      },
-      "label": "Add Twitter Account ?",
-      "name": "rit_twitter_account",
-      "type": "text",
-      "default": "no",
-      "items": ["yes", "no"]
-    },
-    {
-      "condition": {
-            "variable": "rit_twitter_account",
-            "operator": "==",
-            "value": "yes"
-      },
-      "label": "Twitter Account URL:",
-      "name": "rit_twitter_url",
-      "type": "text",
-      "tutorial": "Ex: https://twitter.com/DennisRitchie"
-    },
-    {
-      "condition": {
-            "variable": "rit_social_networks",
-            "operator": "==",
-            "value": "yes"
-      },
-      "label": "Add Medium Account ?",
-      "name": "rit_medium_account",
-      "type": "text",
-      "default": "no",
-      "items": ["yes", "no"]
-    },
-    {
-      "condition": {
-            "variable": "rit_medium_account",
-            "operator": "==",
-            "value": "yes"
-      },
-      "label": "Medium Account URL:",
-      "name": "rit_medium_url",
-      "type": "text",
-      "tutorial": "Ex: https://medium.com/@dennis.ritchie"
+      "label": "Which account do you want to add?",
+      "name": "rit_accounts",
+      "type": "multiselect",
+      "required": false,
+      "items": [
+        "LinkedIn",
+        "Twitter",
+        "Instagram",
+        "Facebook",
+        "Medium"
+        ]
     }
   ]
 }
