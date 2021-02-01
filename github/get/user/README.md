@@ -8,6 +8,8 @@ Formula inspired from the https://github.com/jassics/learning-python repository.
 
 - A Github account username.
 
+- You will need to set Github credentials when executing the formula or through the `rit set credential` command first if you want to het the email associated to your personnal account.
+
 - **Python3** : to build and execute this formula locally.
 
 ## Command
