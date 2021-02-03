@@ -32,10 +32,6 @@ Finally, you can check if the repository has been imported correctly by executin
 
 ## Contribute to the repository with your formulas
 
-I opened an ISSUE on [ritchie-cli repository](https://github.com/ZupIT/ritchie-cli/issues/845) to make it easier to contribute to someone else repository.
-
-Contact me if you have any question for the moment 😉
-
 1. Fork the repository
 2. Create a branch: `git checkout -b <branch_name>`
 3. Check the step by step of [how to create formulas on Ritchie](https://docs.ritchiecli.io/tutorials/formulas/how-to-create-formulas)
