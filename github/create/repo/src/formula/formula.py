@@ -13,10 +13,12 @@ def run(token, username, repository, private):
     data['name'] = repository
     data['description'] = 'Project created with Ritchie CLI'
     data['homepage'] = 'https://ritchiecli.io'
+    data['auto_init'] = True
     if private == 'No':
         data['private'] = False
     else:
         data['private'] = True
+
     json_data = json.dumps(data)
 
     authorization = f'token {token}'

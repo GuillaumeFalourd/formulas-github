@@ -13,6 +13,7 @@ This repository contains Ritchie formulas which can be executed by [ritchie-cli]
 
 - [Create Github Profile](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/create/profile): `rit github create profile`
 - [Create Github Repository](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/create/repo): `rit github create repo`
+- [Delete Github Repository](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/delete/repo): `rit github delete repo`
 - [Generate Github Release](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/generate/release): `rit github generate release`
 - [Get Github Repo Details](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/get/repo): `rit github get repo`
 - [Get Github User Details](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/get/user): `rit github get user`

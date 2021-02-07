@@ -8,13 +8,13 @@
 ## Command
 
 ```bash
-rit github create repo
+rit github delete repo
 ```
 
 ## Description
 
-Formula to create a repository on the Github user account.
+Formula to delete one of the user repository on Github.
 
 ## Demo
 
-<img class="special-img-class" src="/docs/img/rit-github-create-repo.png"/>
+<img class="special-img-class" src="/docs/img/rit-github-delete-repo.png"/>

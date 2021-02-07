@@ -1,0 +1,19 @@
+{
+  "dockerImageBuilder": "cimg/python:3.8",
+  "inputs": [
+    {
+      "name": "rit_git_token",
+      "type": "CREDENTIAL_GITHUB_TOKEN"
+    },
+    {
+      "name": "rit_git_user",
+      "type": "CREDENTIAL_GITHUB_USERNAME"
+    },
+    {
+      "label": "Repository name:",
+      "name": "rit_git_repo",
+      "tutorial": "Ex: ritchie-formulas",
+      "type": "text"
+    }
+  ]
+}
