@@ -49,6 +49,31 @@
         "Facebook",
         "Medium"
         ]
+    },
+        {
+      "label": "Want to add hard skills list?",
+      "name": "rit_hard_skills",
+      "type": "text",
+      "default": "no",
+      "items": ["yes", "no"]
+    },
+    {
+      "condition": {
+            "variable": "rit_hard_skills",
+            "operator": "==",
+            "value": "yes"
+      },
+      "label": "Which skills you want to add?",
+      "name": "rit_hard_skills",
+      "type": "multiselect",
+      "required": false,
+      "items": [
+        "Front End",
+        "Back End",
+        "Tests",
+        "SRE",
+        "DB"
+        ]
     }
   ]
 }

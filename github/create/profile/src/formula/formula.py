@@ -19,12 +19,15 @@ facebook = '<a href="{}"><img src="https://img.shields.io/badge/-Facebook-1877F2
 medium = '<a href="{}"><img src="https://img.shields.io/badge/-Medium-%2312100E?style=flat&logo=medium&logoColor=white"/></a>'
 
 
-def run(username, name, job, company, accounts):
+def run(username, name, job, company, hardskills, accounts):
     mdFile = MdUtils(file_name='README', title=title)
 
     add_introduction(mdFile, username, name, job, company)
 
     add_analytics(mdFile, username)
+
+    if hardskills is not None:
+        add_hardskills(mdFile, hardskills)
 
     if accounts is not None:
         add_accounts_url(mdFile, accounts)
@@ -47,32 +50,48 @@ def add_analytics(mdFile, username):
 
 
 def add_hardskills(mdFile, hardSkillSet):
-    mdFile.write("\n\n### Languages & Tools")
+    mdFile.write("\n\n### Languages & Tools ")
     hard_skill_list = hardSkillSet.split("|")
     mdFile.new_paragraph(paragraph_init)
 
     for hard_skill in hard_skill_list:
 
         if hard_skill == " Front End":
-            frontend_list = input("Insert list of languages and tools( separated by comma): ")
+            frontend_list = input("Insert your front end skills: ")
             for item in frontend_list.split(","):
                 mdFile.write = '<a href="{}"><img src="https://img.shields.io/static/v1?label=<' + \
                                item + '>&message=<' \
                                + item + '>&color=<greem>"/></a>'
 
         if hard_skill == "Back End":
-            backend_list = input("Insert list of languages and tools( separated by comma): ")
+            backend_list = input("Insert your back end skills: ")
             for item in backend_list.split(","):
                 mdFile.write = '<a href="{}"><img src="https://img.shields.io/static/v1?label=<' + \
                                item + '>&message=<' \
                                + item + '>&color=<blue>"/></a>'
 
         if hard_skill == "Tests":
-            tests_list = input("Insert list of languages and tools( separated by comma): ")
-            for item in backend_list.split(","):
+            tests_list = input("Insert your test skills: ")
+            for item in tests_list.split(","):
                 mdFile.write = '<a href="{}"><img src="https://img.shields.io/static/v1?label=<' + \
                                item + '>&message=<' \
                                + item + '>&color=<yellow>"/></a>'
+
+        if hard_skill == "SRE":
+            sre_list = input("Insert your SRE skills : ")
+            for item in sre_list.split(","):
+                mdFile.write = '<a href="{}"><img src="https://img.shields.io/static/v1?label=<' + \
+                               item + '>&message=<' \
+                               + item + '>&color=<yellow>"/></a>'
+
+        if hard_skill == "DB":
+            db_list = input("Insert your DB skills : ")
+            for item in db_list.split(","):
+                mdFile.write = '<a href="{}"><img src="https://img.shields.io/static/v1?label=<' + \
+                               item + '>&message=<' \
+                               + item + '>&color=<yellow>"/></a>'
+
+    mdFile.new_paragraph(paragraph_end)
 
 
 def add_accounts_url(mdFile, accounts):
