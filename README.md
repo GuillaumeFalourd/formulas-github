@@ -34,7 +34,7 @@ echo '{"provider":"Github", "name":"formulas-github", "url":"https://github.com/
 ou, a partir da versão 2.9.0 do CLI, via INPUT FLAGS:
 
 ```bash
-rit add repo --provider=Github --name=formulas-github --url=https://github.com/GuillaumeFalourd/formulas-github --priority=1
+rit add repo --provider=Github --name=formulas-github --repoUrl=https://github.com/GuillaumeFalourd/formulas-github --priority=1
 ```
 
 Finally, you can check if the repository has been imported correctly by executing the `rit list repo` command.
