@@ -19,6 +19,7 @@ This repository contains Ritchie formulas which can be executed by [ritchie-cli]
 - [Get Github User Details](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/get/user): `rit github get user`
 - [Get Github User Email](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/get/user-email): `rit github get user-email`
 - [Add Github Collaborator](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/add/collaborator): `rit github add collaborator`
+- [Delete Github Collaborator](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/delete/collaborator): `rit github delete collaborator`
 
 ## Use Formulas
 
