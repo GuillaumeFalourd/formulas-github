@@ -14,6 +14,6 @@ The user can then created a new repository using the `rit github create repo` co
 
 ## How to use ?
 
-![Command](/docs/img/rit-github-create-profile-command.png)
+![Command](/docs/img/rit-github-create-profile-execution.png)
 
 ![Result](/docs/img/rit-github-create-profile-result.png)
