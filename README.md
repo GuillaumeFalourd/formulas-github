@@ -18,15 +18,17 @@ This repository contains Ritchie formulas which can be executed by [ritchie-cli]
 - [Get Github Repo Details](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/get/repo): `rit github get repo`
 - [Get Github User Details](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/get/user): `rit github get user`
 - [Get Github User Email](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/get/user-email): `rit github get user-email`
+- [Add Github Collaborator](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/add/collaborator): `rit github add collaborator`
+- [Delete Github Collaborator](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/delete/collaborator): `rit github delete collaborator`
 
 ## Use Formulas
 
 To import this repository, you need [Ritchie CLI installed](https://docs.ritchiecli.io/getting-started/installation)
 
-Then, you can use the `rit add repo` command manually, or execute the command line below directly on your terminal:
+Then, you can use the `rit add repo` command manually, or execute the command line below directly on your terminal (since CLI version 2.8.0):
 
 ```bash
-echo '{"provider":"Github", "name":"formulas-github", "url":"https://github.com/GuillaumeFalourd/formulas-github", "priority":1}' | rit add repo --stdin
+rit add repo --provider=Github --name=formulas-github --repoUrl=https://github.com/GuillaumeFalourd/formulas-github --priority=1
 ```
 
 Finally, you can check if the repository has been imported correctly by executing the `rit list repo` command.
@@ -54,4 +56,3 @@ and commit your implementation: `git commit -m '<commit_message>`
 6. Open a pull request on the repository for analysis.
 
 - [Contribute to Ritchie community](https://github.com/ZupIT/ritchie-formulas/blob/master/CONTRIBUTING.md)
-
