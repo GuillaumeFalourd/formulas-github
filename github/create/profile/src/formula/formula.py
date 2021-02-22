@@ -8,6 +8,7 @@ visitors = '![](http://estruyf-github.azurewebsites.net/api/VisitorHit?user={}&r
 languages = '![Github Languages](https://github-readme-stats.vercel.app/api/top-langs/?username={}&layout=compact&count_private=true)'
 statistics = '![Github Statistics](https://github-readme-stats.vercel.app/api/?username={}&count_private=true&show_icons=true)'
 contributions = '![Github Contributions](https://github-readme-streak-stats.herokuapp.com/?user={}&hide_border=true)'
+skills = '![{}](https://img.shields.io/badge/-{}-05122A?style=flat&color={})&nbsp;'
 
 paragraph_init = '<p align="left">'
 paragraph_end = '</p>'
@@ -26,11 +27,11 @@ def run(username, name, job, company, hardskills, accounts):
 
     add_analytics(mdFile, username)
 
-    if hardskills is not None:
-        add_hardskills(mdFile, hardskills)
-
     if accounts is not None:
         add_accounts_url(mdFile, accounts)
+
+    if hardskills is not None:
+        add_hardskills(mdFile, hardskills)
 
     mdFile.create_md_file()
 
@@ -49,47 +50,36 @@ def add_analytics(mdFile, username):
     mdFile.new_paragraph(contributions.format(username))
 
 
-def add_hardskills(mdFile, hardSkillSet):
-    mdFile.write("\n\n### Languages & Tools ")
-    hard_skill_list = hardSkillSet.split("|")
+def add_hardskills(mdFile, hardskillset):
+    mdFile.write("\n\n### Languages & Tools 🛠")
+    hard_skill_list = hardskillset.split("|")
     mdFile.new_paragraph(paragraph_init)
-
     for hard_skill in hard_skill_list:
 
-        if hard_skill == " Front End":
-            frontend_list = input("Insert your front end skills: ")
-            for item in frontend_list.split(","):
-                mdFile.write = '<a href="{}"><img src="https://img.shields.io/static/v1?label=<' + \
-                               item + '>&message=<' \
-                               + item + '>&color=<greem>"/></a>'
+        if hard_skill == "Languages":
+            language = input("Insert your languages skills: ")
+            for item in language.split(","):
+                mdFile.write(skills.format(item, item, "green"))
 
-        if hard_skill == "Back End":
-            backend_list = input("Insert your back end skills: ")
-            for item in backend_list.split(","):
-                mdFile.write = '<a href="{}"><img src="https://img.shields.io/static/v1?label=<' + \
-                               item + '>&message=<' \
-                               + item + '>&color=<blue>"/></a>'
+        if hard_skill == "Frameworks":
+            framework = input("Insert your frameworks skills: ")
+            for item in framework.split(","):
+                mdFile.write(skills.format(item, item, "orange"))
 
-        if hard_skill == "Tests":
-            tests_list = input("Insert your test skills: ")
-            for item in tests_list.split(","):
-                mdFile.write = '<a href="{}"><img src="https://img.shields.io/static/v1?label=<' + \
-                               item + '>&message=<' \
-                               + item + '>&color=<yellow>"/></a>'
+        if hard_skill == "Data Banks":
+            database = input("Insert your data banks skills: ")
+            for item in database.split(","):
+                mdFile.write(skills.format(item, item, "yellow"))
 
-        if hard_skill == "SRE":
-            sre_list = input("Insert your SRE skills : ")
-            for item in sre_list.split(","):
-                mdFile.write = '<a href="{}"><img src="https://img.shields.io/static/v1?label=<' + \
-                               item + '>&message=<' \
-                               + item + '>&color=<yellow>"/></a>'
+        if hard_skill == "Cloud":
+            cloud = input("Insert your cloud skills : ")
+            for item in cloud.split(","):
+                mdFile.write(skills.format(item, item, "blue"))
 
-        if hard_skill == "DB":
-            db_list = input("Insert your DB skills : ")
-            for item in db_list.split(","):
-                mdFile.write = '<a href="{}"><img src="https://img.shields.io/static/v1?label=<' + \
-                               item + '>&message=<' \
-                               + item + '>&color=<yellow>"/></a>'
+        if hard_skill == "Tools":
+            tools = input("Insert your tools skills : ")
+            for item in tools.split(","):
+                mdFile.write(skills.format(item, item, "gray"))
 
     mdFile.new_paragraph(paragraph_end)
 

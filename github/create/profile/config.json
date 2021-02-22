@@ -63,16 +63,16 @@
             "operator": "==",
             "value": "yes"
       },
-      "label": "Which skills you want to add?",
+      "label": "Which skill do you want to add? (ex: Java,Kotlin,Spring | Separated with coma without space)",
       "name": "rit_hard_skills",
       "type": "multiselect",
       "required": false,
       "items": [
-        "Front End",
-        "Back End",
-        "Tests",
-        "SRE",
-        "DB"
+        "Languages",
+        "Frameworks",
+        "Tools",
+        "Data Banks",
+        "Cloud"
         ]
     }
   ]
