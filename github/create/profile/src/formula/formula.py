@@ -25,13 +25,13 @@ def run(username, name, job, company, hardskills, accounts):
 
     add_introduction(mdFile, username, name, job, company)
 
+    if hardskills is not None:
+        add_hardskills(mdFile, hardskills)
+
     add_analytics(mdFile, username)
 
     if accounts is not None:
         add_accounts_url(mdFile, accounts)
-
-    if hardskills is not None:
-        add_hardskills(mdFile, hardskills)
 
     mdFile.create_md_file()
 
@@ -53,36 +53,39 @@ def add_analytics(mdFile, username):
 def add_hardskills(mdFile, hardskillset):
     mdFile.write("\n\n### Languages & Tools 🛠")
     hard_skill_list = hardskillset.split("|")
-    mdFile.new_paragraph(paragraph_init)
+    mdFile.write('  \n')
     for hard_skill in hard_skill_list:
 
         if hard_skill == "Languages":
             language = input("Insert your languages skills: ")
             for item in language.split(","):
                 mdFile.write(skills.format(item, item, "green"))
+            mdFile.write('  \n')
 
         if hard_skill == "Frameworks":
             framework = input("Insert your frameworks skills: ")
             for item in framework.split(","):
                 mdFile.write(skills.format(item, item, "orange"))
+            mdFile.write('  \n')
 
         if hard_skill == "Data Banks":
             database = input("Insert your data banks skills: ")
             for item in database.split(","):
                 mdFile.write(skills.format(item, item, "yellow"))
+            mdFile.write('  \n')
 
         if hard_skill == "Cloud":
             cloud = input("Insert your cloud skills : ")
             for item in cloud.split(","):
                 mdFile.write(skills.format(item, item, "blue"))
+            mdFile.write('  \n')
 
         if hard_skill == "Tools":
             tools = input("Insert your tools skills : ")
             for item in tools.split(","):
                 mdFile.write(skills.format(item, item, "gray"))
-
-    mdFile.new_paragraph(paragraph_end)
-
+            mdFile.write('  \n')
+            
 
 def add_accounts_url(mdFile, accounts):
     mdFile.write("\n\n### Let's connect? 🤝")

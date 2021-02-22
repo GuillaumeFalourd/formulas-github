@@ -26,6 +26,32 @@
       "type": "text"
     },
     {
+      "label": "Want to add hard skills list?",
+      "name": "rit_hard_skills",
+      "type": "text",
+      "default": "no",
+      "items": ["yes", "no"]
+    },
+    {
+      "condition": {
+            "variable": "rit_hard_skills",
+            "operator": "==",
+            "value": "yes"
+      },
+      "label": "Which skill do you want to add?",
+      "name": "rit_hard_skills",
+      "type": "multiselect",
+      "tutorial":"Multiplus skills have to be separated with coma without space (e.g: Java,Kotlin,Spring)",
+      "required": false,
+      "items": [
+        "Languages",
+        "Frameworks",
+        "Tools",
+        "Data Banks",
+        "Cloud"
+        ]
+    },
+    {
       "label": "Want to add social network links?",
       "name": "rit_social_networks",
       "type": "text",
@@ -48,31 +74,6 @@
         "Instagram",
         "Facebook",
         "Medium"
-        ]
-    },
-        {
-      "label": "Want to add hard skills list?",
-      "name": "rit_hard_skills",
-      "type": "text",
-      "default": "no",
-      "items": ["yes", "no"]
-    },
-    {
-      "condition": {
-            "variable": "rit_hard_skills",
-            "operator": "==",
-            "value": "yes"
-      },
-      "label": "Which skill do you want to add? (ex: Java,Kotlin,Spring | Separated with coma without space)",
-      "name": "rit_hard_skills",
-      "type": "multiselect",
-      "required": false,
-      "items": [
-        "Languages",
-        "Frameworks",
-        "Tools",
-        "Data Banks",
-        "Cloud"
         ]
     }
   ]
