@@ -56,3 +56,11 @@ and commit your implementation: `git commit -m '<commit_message>`
 6. Open a pull request on the repository for analysis.
 
 - [Contribute to Ritchie community](https://github.com/ZupIT/ritchie-formulas/blob/master/CONTRIBUTING.md)
+
+### Contributors
+
+<a href="https://github.com/GuillaumeFalourd/formulas-github/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GuillaumeFalourd/formulas-github" />
+</a>
+
+(Made with [contributors-img](https://contrib.rocks))
