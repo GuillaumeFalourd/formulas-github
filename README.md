@@ -59,5 +59,5 @@ and commit your implementation: `git commit -m '<commit_message>`
 
 ### Contributors
 
-[![](https://opencollective.com/html-react-parser/contributors.svg?width=890&button=false)](https://github.com/GuillaumeFalourd/formulas-github/graphs/contributors)
+[![]()](https://github.com/GuillaumeFalourd/formulas-github/graphs/contributors)
 
