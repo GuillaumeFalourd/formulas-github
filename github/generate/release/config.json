@@ -6,8 +6,15 @@
       "type": "CREDENTIAL_GITHUB_TOKEN"
     },
     {
-      "name": "rit_git_user",
-      "type": "CREDENTIAL_GITHUB_USERNAME"
+      "label": "Repository owner:",
+      "name": "rit_repo_owner",
+      "tutorial": "Ex: octocat",
+      "type": "text",
+      "cache": {
+        "active": true,
+        "qty": 5,
+        "newLabel": "Type new value:"
+      }
     },
     {
       "label": "Repository name:",
@@ -32,11 +39,19 @@
       }
     },
     {
-      "default": "1.0.0",
       "label": "Version Tag:",
       "name": "rit_repo_version",
       "tutorial": "Ex: 2.1.0",
-      "type": "text"
+      "type": "text",
+      "required": true
+    }
+    ,
+    {
+      "label": "Description:",
+      "name": "rit_release_description",
+      "tutorial": "Ex: First release",
+      "type": "text",
+      "default": "Release generated automatically using Ritchie CLI"
     }
   ]
 }

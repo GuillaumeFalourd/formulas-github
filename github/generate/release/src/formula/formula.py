@@ -2,12 +2,12 @@
 import requests
 import json
 
-def run(token, username, repository, branch, version):
+def run(token, owner, repository, branch, version, description):
 
-    url = f'https://api.github.com/repos/{username}/{repository}/releases'
+    url = f'https://api.github.com/repos/{owner}/{repository}/releases'
 
     data = {}
-    data['body'] = 'Release generated automatically using Ritchie CLI'
+    data['body'] = description
     data['target_commitish'] = branch
     data['tag_name'] = version
     data['name'] = version
@@ -26,9 +26,9 @@ def run(token, username, repository, branch, version):
         )
 
     if r.status_code == 201:
-        message = "Release %s successfully generated for %s repository" % (version, repository)
+        message = "✅ Release %s successfully generated for %s's %s repository" % (version, owner, repository)
         print(message)
 
     else:
-        print("Couldn't generate repository release")
+        print("❌ Couldn't generate repository release")
         print (r.status_code, r.reason)
