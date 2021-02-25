@@ -10,6 +10,7 @@
       "name": "rit_repo_owner",
       "tutorial": "Ex: octocat",
       "type": "text",
+      "required": true,
       "cache": {
         "active": true,
         "qty": 5,
@@ -21,6 +22,7 @@
       "name": "rit_git_repo",
       "tutorial": "Ex: ritchie-formulas",
       "type": "text",
+      "required": true,
       "cache": {
         "active": true,
         "qty": 5,
@@ -32,6 +34,7 @@
       "name": "rit_repo_branch",
       "tutorial": "Ex: dev, qa, test",
       "type": "text",
+      "required": true,
       "cache": {
         "active": true,
         "qty": 5,
