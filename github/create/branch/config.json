@@ -1,0 +1,42 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-python3-builder",
+  "inputs": [
+    {
+      "name": "rit_git_token",
+      "type": "CREDENTIAL_GITHUB_TOKEN"
+    },
+    {
+      "label": "Repository owner:",
+      "name": "rit_repo_owner",
+      "tutorial": "Ex: octocat",
+      "type": "text",
+      "cache": {
+        "active": true,
+        "qty": 5,
+        "newLabel": "Type new value:"
+      }
+    },
+    {
+      "label": "Repository name:",
+      "name": "rit_git_repo",
+      "tutorial": "Ex: ritchie-formulas",
+      "type": "text",
+      "cache": {
+        "active": true,
+        "qty": 5,
+        "newLabel": "Type new value:"
+      }
+    },
+    {
+      "label": "New branch name:",
+      "name": "rit_repo_branch",
+      "tutorial": "Ex: dev, qa, test",
+      "type": "text",
+      "cache": {
+        "active": true,
+        "qty": 5,
+        "newLabel": "Type new value:"
+      }
+    }
+  ]
+}
