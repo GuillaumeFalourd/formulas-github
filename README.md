@@ -29,7 +29,7 @@ To import this repository, you need [Ritchie CLI installed](https://docs.ritchie
 Then, you can use the `rit add repo` command manually, or execute the command line below directly on your terminal (since CLI version 2.8.0):
 
 ```bash
-rit add repo --provider=Github --name=formulas-github --repoUrl=https://github.com/GuillaumeFalourd/formulas-github --priority=1
+rit add repo --provider="Github" --name="formulas-github" --repoUrl="https://github.com/GuillaumeFalourd/formulas-github" --priority=1
 ```
 
 Finally, you can check if the repository has been imported correctly by executing the `rit list repo` command.
@@ -57,3 +57,11 @@ and commit your implementation: `git commit -m '<commit_message>`
 6. Open a pull request on the repository for analysis.
 
 - [Contribute to Ritchie community](https://github.com/ZupIT/ritchie-formulas/blob/master/CONTRIBUTING.md)
+
+### Contributors
+
+<a href="https://github.com/GuillaumeFalourd/formulas-github/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GuillaumeFalourd/formulas-github" />
+</a>
+
+(Made with [contributors-img](https://contrib.rocks))
