@@ -41,7 +41,6 @@
       "label": "Which skill do you want to add?",
       "name": "rit_hard_skills",
       "type": "multiselect",
-      "tutorial":"Multiplus skills have to be separated with coma without space (e.g: Java,Kotlin,Spring)",
       "required": false,
       "items": [
         "Languages",
