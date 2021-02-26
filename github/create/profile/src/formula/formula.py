@@ -58,30 +58,35 @@ def add_hardskills(mdFile, hardskillset):
 
         if hard_skill == "Languages":
             language = input("Insert your languages skills: ")
+            language.replace(" ", "")
             for item in language.split(","):
                 mdFile.write(skills.format(item, item, "green"))
             mdFile.write('  \n')
 
         if hard_skill == "Frameworks":
             framework = input("Insert your frameworks skills: ")
+            framework.replace(" ", "")
             for item in framework.split(","):
                 mdFile.write(skills.format(item, item, "orange"))
             mdFile.write('  \n')
 
         if hard_skill == "Data Banks":
             database = input("Insert your data banks skills: ")
+            database.replace(" ", "")
             for item in database.split(","):
                 mdFile.write(skills.format(item, item, "yellow"))
             mdFile.write('  \n')
 
         if hard_skill == "Cloud":
-            cloud = input("Insert your cloud skills : ")
+            cloud = input("Insert your cloud skills: ")
+            cloud.replace(" ", "")
             for item in cloud.split(","):
                 mdFile.write(skills.format(item, item, "blue"))
             mdFile.write('  \n')
 
         if hard_skill == "Tools":
-            tools = input("Insert your tools skills : ")
+            tools = input("Insert your tools skills: ")
+            tools.replace(" ", "")
             for item in tools.split(","):
                 mdFile.write(skills.format(item, item, "gray"))
             mdFile.write('  \n')
