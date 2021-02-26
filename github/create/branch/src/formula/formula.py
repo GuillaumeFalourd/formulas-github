@@ -3,8 +3,9 @@ import requests
 import json
 import re
 import inquirer
+import os
 
-def run(token, owner, repository, branch):
+def run(token, owner, repository, branch, default):
     url = f'https://api.github.com/repos/{owner}/{repository}/git/refs'
     
     authorization = f'token {token}'
@@ -29,12 +30,13 @@ def run(token, owner, repository, branch):
     
     questions = [
         inquirer.List('reference',
-                message = "What is the reference branch?",
+                message = "\033[1mReference branch\033[0m",
                 choices = repo_branches,
             ),
     ]
     answers = inquirer.prompt(questions)
     reference = answers["reference"]
+    print("⚙️ Creating new branch...")
     
     for bs in repo_shas:
         match = re.search(".+?(?=\|)", bs).group()
@@ -54,11 +56,14 @@ def run(token, owner, repository, branch):
     )
         
     if r2.status_code == 201:
-        message = "✅ Branch %s successfully created on %s's %s repository" % (branch, owner, repository)
+        message = "✅ Branch \033[36m%s\033[0m successfully created on %s's \033[36m%s\033[0m repository" % (branch, owner, repository)
         print(message)
+        
+        if default == "yes":
+            print("⚙️ Updating default branch...")
+            input_flag_cmd = 'rit github update default --rit_repo_owner={} --rit_git_repo={} --rit_repo_branch={}'.format(owner, repository, branch)
+            os.system(f'{input_flag_cmd}')
 
     else:
         print("❌ Couldn't create the branch on the repository")
         print (r2.status_code, r2.reason)
-        
-

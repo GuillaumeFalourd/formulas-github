@@ -30,9 +30,9 @@
       }
     },
     {
-      "label": "New branch name:",
+      "label": "Branch to set as default:",
       "name": "rit_repo_branch",
-      "tutorial": "Ex: dev, qa, test",
+      "tutorial": "The branch must already exist (Ex: dev, qa, test)",
       "type": "text",
       "required": true,
       "cache": {
@@ -40,16 +40,6 @@
         "qty": 5,
         "newLabel": "Type new value:"
       }
-    },
-    {
-      "label": "Set new branch as default?",
-      "name": "rit_branch_default",
-      "type": "text",
-      "required": true,
-      "items": [
-        "yes",
-        "no"
-      ]
     }
   ]
 }
