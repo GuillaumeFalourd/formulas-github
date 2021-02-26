@@ -54,6 +54,7 @@ def add_hardskills(mdFile, hardskillset):
     mdFile.write("\n\n### Languages & Tools 🛠")
     hard_skill_list = hardskillset.split("|")
     mdFile.write('  \n')
+    print("Multiplus skills have to be separated with coma without space (e.g: Java,Kotlin,Spring)")
     for hard_skill in hard_skill_list:
 
         if hard_skill == "Languages":
