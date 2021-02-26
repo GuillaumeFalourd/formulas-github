@@ -13,7 +13,7 @@ rit github create branch
 
 ## Description
 
-This formula allows the user to create a new branch remotely on a repository he can access.
+This formula allows the user to create a new branch remotely on a repository he can access, and to set it as default if needed.
 
 ## Demo
 
