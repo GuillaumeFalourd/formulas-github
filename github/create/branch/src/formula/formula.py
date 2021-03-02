@@ -6,9 +6,9 @@ import inquirer
 import os
 
 def run(token, owner, repository, branch, default):
-    url = f'https://api.github.com/repos/{owner}/{repository}/git/refs'
+    url = f"https://api.github.com/repos/{owner}/{repository}/git/refs"
     
-    authorization = f'token {token}'
+    authorization = f"token {token}"
     headers = {
         "Accept": "application/vnd.github.v3+json",
         "Authorization" : authorization,
@@ -27,7 +27,7 @@ def run(token, owner, repository, branch, default):
         shas[branch_name] = d["object"]["sha"]
     
     questions = [
-        inquirer.List('reference',
+        inquirer.List("reference",
                 message = "\033[1mReference branch\033[0m",
                 choices = shas.keys(),
             ),
@@ -37,8 +37,8 @@ def run(token, owner, repository, branch, default):
     print("⚙️ Creating new branch...")
     
     data = {}
-    data['ref'] = f'refs/heads/{branch}'
-    data['sha'] = shas[reference]
+    data["ref"] = f"refs/heads/{branch}"
+    data["sha"] = shas[reference]
         
     json_data = json.dumps(data)
     
@@ -53,8 +53,8 @@ def run(token, owner, repository, branch, default):
         
         if default == "yes":
             print("⚙️ Updating default branch...")
-            input_flag_cmd = f'rit github update default --rit_repo_owner={owner} --rit_git_repo={repository} --rit_repo_branch={branch}'
-            os.system(f'{input_flag_cmd}')
+            input_flag_cmd = f"rit github update default --rit_repo_owner={owner} --rit_git_repo={repository} --rit_repo_branch={branch}"
+            os.system(f"{input_flag_cmd}")
 
     else:
         print("❌ Couldn't create the branch on the repository")
