@@ -6,9 +6,9 @@ def run(token, username, repository):
 
     repository = urlify(repository)
 
-    url = f'https://api.github.com/repos/{username}/{repository}'
+    url = f"https://api.github.com/repos/{username}/{repository}"
 
-    authorization = f'token {token}'
+    authorization = f"token {token}"
     headers = {
         "Accept": "application/vnd.github.v3+json",
         "Authorization" : authorization,
@@ -20,19 +20,15 @@ def run(token, username, repository):
         )
 
     if r.status_code == 204:
-        message = "Repository https://github.com/%s/%s successfully deleted!" % (username, repository)
-        print(message)
+        print(f"✅ Repository https://github.com/{username}/{repository} successfully deleted!")
 
     else:
-        print("Couldn't delete repository https://github.com/%s/%s" % (username, repository))
-        print (r.status_code, r.reason)
+        print(f"❌ Couldn't delete repository https://github.com/{username}/{repository}")
+        print(r.status_code, r.reason)
 
 def urlify(s):
-
     # Remove all non-word characters (everything except numbers and letters)
     s = re.sub(r"[^\w\s\-]", '', s)
-
     # Replace all runs of whitespace with a single dash
     s = re.sub(r"\s+", '-', s)
-
     return s
