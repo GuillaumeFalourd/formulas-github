@@ -34,10 +34,10 @@ def run(token, username, repository, private):
     )
 
     if r.status_code == 201:
-        print(f"Repository successfully created on https://github.com/{username}/{repository}!")
+        print(f"✅ Repository successfully created on https://github.com/{username}/{repository}!")
 
     else:
-        print("Couldn't create new repository")
+        print("❌ Couldn't create new repository")
         print (r.status_code, r.reason)
 
 def urlify(s):
