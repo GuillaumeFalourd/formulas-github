@@ -20,33 +20,26 @@ def run(token, owner, repository, branch, default):
     )
     
     datas = r1.json()
-    repo_branches = []
-    repo_shas = [] 
+    shas = {}
     
     for d in datas:
         branch_name = re.search("(?<=refs\/heads\/).*", d["ref"]).group()
-        repo_branches.append(branch_name)
-        repo_shas.append(branch_name+"|"+d["object"]["sha"])
+        shas[branch_name] = d["object"]["sha"]
     
     questions = [
         inquirer.List('reference',
                 message = "\033[1mReference branch\033[0m",
-                choices = repo_branches,
+                choices = shas.keys(),
             ),
     ]
     answers = inquirer.prompt(questions)
     reference = answers["reference"]
     print("⚙️ Creating new branch...")
     
-    for bs in repo_shas:
-        match = re.search(".+?(?=\|)", bs).group()
-        if reference == match:
-            sha = re.search("(?<=\|).*", bs).group()
-    
     data = {}
-    data['ref'] = 'refs/heads/%s' % branch
-    data['sha'] = sha
-    
+    data['ref'] = f'refs/heads/{branch}'
+    data['sha'] = shas[reference]
+        
     json_data = json.dumps(data)
     
     r2 = requests.post(
@@ -56,12 +49,11 @@ def run(token, owner, repository, branch, default):
     )
         
     if r2.status_code == 201:
-        message = "✅ Branch \033[36m%s\033[0m successfully created on %s's \033[36m%s\033[0m repository" % (branch, owner, repository)
-        print(message)
+        print(f"✅ Branch \033[36m{branch}\033[0m successfully created on {owner}'s \033[36m{repository}\033[0m repository")
         
         if default == "yes":
             print("⚙️ Updating default branch...")
-            input_flag_cmd = 'rit github update default --rit_repo_owner={} --rit_git_repo={} --rit_repo_branch={}'.format(owner, repository, branch)
+            input_flag_cmd = f'rit github update default --rit_repo_owner={owner} --rit_git_repo={repository} --rit_repo_branch={branch}'
             os.system(f'{input_flag_cmd}')
 
     else:
