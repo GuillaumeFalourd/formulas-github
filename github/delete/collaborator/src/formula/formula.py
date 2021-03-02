@@ -25,12 +25,11 @@ def run(token, username, repository, collaborator):
         )
 
         if r2.status_code == 204:
-            message = f"Collaborator {collaborator} successfully removed from {username}'s {repository} repository"
-            print(message)
+            print(f"✅ Collaborator {collaborator} successfully removed from {username}'s {repository} repository")
 
         else:
-            print("Couldn't delete the collaborator from the repository")
+            print("❌ Couldn't delete the collaborator from the repository")
             print (r2.status_code, r2.reason)
 
     else:
-        print(f"Username {collaborator} isn't a {repository} repository collaborator")
+        print(f"⚠️ Username {collaborator} isn't a {repository} repository collaborator")
