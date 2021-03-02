@@ -3,14 +3,14 @@ import requests
 import json
 
 def run(token, username, repository, collaborator):
-    url = f'https://api.github.com/repos/{username}/{repository}/collaborators/{collaborator}'
+    url = f"https://api.github.com/repos/{username}/{repository}/collaborators/{collaborator}"
 
     data = {}
-    data['permission'] = 'push'
+    data["permission"] = "push"
 
     json_data = json.dumps(data)
 
-    authorization = f'token {token}'
+    authorization = f"token {token}"
     headers = {
         "Accept": "application/vnd.github.v3+json",
         "Authorization" : authorization,
@@ -23,8 +23,7 @@ def run(token, username, repository, collaborator):
         )
 
     if r.status_code == 201:
-        message = "Collaborator %s successfully added to %s repository" % (collaborator, repository)
-        print(message)
+        print(f"Collaborator {collaborator} successfully added to {username}'s {repository} repository")
 
     else:
         print("Couldn't add the collaborator to the repository")
