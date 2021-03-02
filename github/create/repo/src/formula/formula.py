@@ -31,7 +31,7 @@ def run(token, username, repository, private):
         url=url,
         data=json_data,
         headers=headers
-    )
+        )
 
     if r.status_code == 201:
         print(f"✅ Repository successfully created on https://github.com/{username}/{repository}!")
