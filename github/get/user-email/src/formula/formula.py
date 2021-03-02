@@ -5,7 +5,8 @@ from requests.auth import HTTPBasicAuth
 def run(user, key, login):
 
     github_user = requests.get(
-        ('https://api.github.com/users/%s' % (login)), auth=HTTPBasicAuth(user, key),
+        url = f"https://api.github.com/users/{login}",
+        auth = HTTPBasicAuth(user, key),
     ).json()
 
     if "message" in github_user and github_user["message"] == "Not Found":
@@ -18,7 +19,8 @@ def run(user, key, login):
         if email is None or name is None:
 
             events = requests.get(
-                ('https://api.github.com/users/%s/events?per_page=100' % (login)), auth=HTTPBasicAuth(user, key),
+                url = f"https://api.github.com/users/{login}/events?per_page=100", 
+                auth = HTTPBasicAuth(user, key),
             ).json()
 
             if name is None:
@@ -27,13 +29,10 @@ def run(user, key, login):
             if email is None:
                 email = get_email(events, login, name)
 
-
         print("------------------------------------------------------------------------------------------------")
         print(f'{"Github User":^20} {"Name":^35} {"Email":^40}')
         print("------------------------------------------------------------------------------------------------")
-        print(
-            f'{login:^20} {name:^35} {email:^40}'
-        )
+        print(f"{login:^20} {name:^35} {email:^40}")
 
 def get_name(events, login):
     name = "-"
