@@ -20,7 +20,7 @@ def run(token, username, repository, collaborator):
         url=url,
         data=json_data,
         headers=headers
-    )
+        )
 
     if r.status_code == 201:
         print(f"✅ Collaborator {collaborator} successfully added to {username}'s {repository} repository")
