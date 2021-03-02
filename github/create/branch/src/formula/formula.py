@@ -17,7 +17,7 @@ def run(token, owner, repository, branch, default):
     r1 = requests.get(
         url=url+"/heads",
         headers=headers
-    )
+        )
     
     datas = r1.json()
     shas = {}
@@ -46,7 +46,7 @@ def run(token, owner, repository, branch, default):
         url=url,
         data=json_data,
         headers=headers
-    )
+        )
         
     if r2.status_code == 201:
         print(f"✅ Branch \033[36m{branch}\033[0m successfully created on {owner}'s \033[36m{repository}\033[0m repository")
