@@ -14,7 +14,7 @@ import json
 regex_pattern = r"(?<=\+)(.*)"
 
 def Run(user, key, repository, contribution):
-    user_repo = re.sub('https://github.com/', '', repository)
+    user_repo = re.sub("https://github.com/","", repository)
     datas = user_repo.split(sep ='/', maxsplit=2)
     owner = datas[0]
     repo = datas[1]
@@ -115,7 +115,7 @@ def print_contribution(insights, user, key):
 
 def get_contributor_details(user, key, contributor):
     github_user = requests.get(
-        ('https://api.github.com/users/%s' % (contributor["login"])), auth=HTTPBasicAuth(user, key),
+        ("https://api.github.com/users/%s" % (contributor["login"])), auth=HTTPBasicAuth(user, key),
     ).json()
 
     if "message" in github_user and github_user["message"] == "Not Found":
@@ -128,7 +128,7 @@ def get_contributor_details(user, key, contributor):
         if contributor["email"] is None or contributor["name"] is None:
 
             events = requests.get(
-                ('https://api.github.com/users/%s/events?per_page=100' % (contributor["login"])), auth=HTTPBasicAuth(user, key),
+                ("https://api.github.com/users/%s/events?per_page=100" % (contributor["login"])), auth=HTTPBasicAuth(user, key),
             ).json()
 
             if contributor["name"] is None:
