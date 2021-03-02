@@ -37,7 +37,7 @@ def run(token, username, repository, private):
         print(f"✅ Repository successfully created on https://github.com/{username}/{repository}!")
 
     else:
-        print("❌ Couldn't create new repository")
+        print(f"❌ Couldn't create {username}'s new repository")
         print (r.status_code, r.reason)
 
 def urlify(s):
