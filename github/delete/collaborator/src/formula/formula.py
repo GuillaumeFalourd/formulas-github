@@ -15,14 +15,14 @@ def run(token, username, repository, collaborator):
     r1 = requests.get(
         url=url,
         headers=headers
-    )
+        )
 
     if r1.status_code == 204:
 
         r2 = requests.delete(
             url=url,
             headers=headers
-        )
+            )
 
         if r2.status_code == 204:
             print(f"✅ Collaborator {collaborator} successfully removed from {username}'s {repository} repository")
