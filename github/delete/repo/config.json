@@ -8,31 +8,6 @@
     {
       "name": "rit_git_user",
       "type": "CREDENTIAL_GITHUB_USERNAME"
-    },
-    {
-      "label": "Repository name:",
-      "name": "rit_git_repo",
-      "tutorial": "Ex: ritchie-formulas",
-      "type": "dynamic",
-      "required": true,
-      "requestInfo": {
-        "url": "https://api.github.com/users/$RIT_GIT_USER/repos",
-        "jsonPath": "$..name"
-      }
-    },
-    {
-          "condition": {
-                "variable": "rit_name",
-                "operator": "!=",
-                "value": ""
-          },
-          "label": "Are you sure?",
-          "name": "rit_confirmation",
-          "type": "text",
-          "items":[
-            "Yes",
-            "No"
-          ]
     }
   ]
 }
