@@ -4,7 +4,7 @@ import json
 
 def run(token, username, repository, collaborator):
 
-    url = f"https://api.github.com/repos/{username}/{repository}/collaborators{collaborator}"
+    url = f"https://api.github.com/repos/{username}/{repository}/collaborators/{collaborator}"
 
     authorization = f"token {token}"
     headers = {
@@ -18,7 +18,7 @@ def run(token, username, repository, collaborator):
         )
 
     if r1.status_code == 204:
-
+        
         r2 = requests.delete(
             url=url,
             headers=headers
