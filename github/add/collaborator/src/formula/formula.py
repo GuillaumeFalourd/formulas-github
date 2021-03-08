@@ -23,7 +23,7 @@ def run(token, username, repository, collaborator):
         )
 
     if r.status_code == 201:
-        print(f"✅ Collaborator {collaborator} successfully added to {username}'s {repository} repository")
+        print(f"✅ Collaborator \033[36m{collaborator}\033[0m successfully added to {username}'s \033[36m{repository}\033[0m repository")
 
     else:
         print("❌ Couldn't add the collaborator to the repository")
