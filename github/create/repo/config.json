@@ -25,6 +25,16 @@
         "Yes",
         "No"
       ]
+    },
+    {
+      "default": "No",
+      "label": "Do you want to clone the repository to the current path?",
+      "name": "rit_clone",
+      "type": "text",
+      "items": [
+        "Yes",
+        "No"
+      ]
     }
   ]
 }

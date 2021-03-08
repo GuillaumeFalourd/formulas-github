@@ -7,5 +7,6 @@ token = os.environ.get("RIT_GIT_TOKEN")
 username = os.environ.get("RIT_GIT_USER")
 repository = os.environ.get("RIT_GIT_REPO")
 private = os.environ.get("RIT_REPO_PRIVACY")
+clone = os.environ.get("RIT_CLONE")
 
-formula.run(token, username, repository, private)
+formula.run(token, username, repository, private, clone)

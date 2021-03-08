@@ -13,7 +13,7 @@ rit github create repo
 
 ## Description
 
-Formula to create a repository on the Github user account.
+Formula to create a repository on the Github user account, and locally (if wished).
 
 ## Demo
 
