@@ -26,7 +26,7 @@ def run(token, owner, repository, branch, version, description):
         )
 
     if r.status_code == 201:
-        print(f"✅ Release {version} successfully generated for {owner}'s {repository} repository")
+        print(f"✅ Release \033[36m{version}\033[0m successfully generated for {owner}'s \033[36m{repository}\033[0m repository")
 
     else:
         print("❌ Couldn't generate repository release")
