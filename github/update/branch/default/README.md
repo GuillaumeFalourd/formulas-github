@@ -8,13 +8,13 @@
 ## Command
 
 ```bash
-rit github update default
+rit github update branch default
 ```
 
 ## Description
 
-This formula allows the user to set a branch as default.
+This formula allows the user to set a repository branch as default.
 
 ## Demo
 
-<img class="special-img-class" src="/docs/img/rit-github-update-default.png"/>
+<img class="special-img-class" src="/docs/img/rit-github-update-branch-default.png"/>
