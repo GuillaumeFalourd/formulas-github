@@ -34,7 +34,7 @@ def run(token, owner, repository, branch, default):
     ]
     answers = inquirer.prompt(questions)
     reference = answers["reference"]
-    print("⚙️ Creating new branch...")
+    print("⚙️  Creating new branch...")
     
     data = {}
     data["ref"] = f"refs/heads/{branch}"

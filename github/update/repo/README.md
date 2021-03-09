@@ -17,4 +17,10 @@ This formula allows the user to update the default branch on all his repositorie
 
 ## Demo
 
-<img class="special-img-class" src="/docs/img/rit-github-update-repo.png"/>
+### Sample 1
+
+<img class="special-img-class" src="/docs/img/rit-github-update-repo-sample-1.png"/>
+
+### Sample 2
+
+<img class="special-img-class" src="/docs/img/rit-github-update-repo-sample-2.png"/>
