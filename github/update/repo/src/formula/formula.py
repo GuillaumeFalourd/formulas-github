@@ -56,7 +56,7 @@ def run(token, username, default_branch, repos):
                 
             if default_branch in branches:
                 print(f"\n🛠  Updating default branch for \033[36m{repository}\033[0m...")
-                input_flag_cmd = f"rit github update branch default --rit_repo_owner=\"{username}\" --rit_git_repo=\"{repository}\" --rit_repo_branch=\"{default_branch}\""
+                input_flag_cmd = f"rit github update default-branch --rit_repo_owner=\"{username}\" --rit_git_repo=\"{repository}\" --rit_repo_branch=\"{default_branch}\""
                 os.system(f"{input_flag_cmd}")
             else:
                 print(f"\n🛠  Creating new \033[36m{default_branch}\033[0m branch for \033[36m{repository}\033[0m...")
