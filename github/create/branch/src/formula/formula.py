@@ -52,7 +52,7 @@ def run(token, owner, repository, branch, default):
         print(f"✅ Branch \033[36m{branch}\033[0m successfully created on {owner}'s \033[36m{repository}\033[0m repository")
         
         if default == "yes":
-            print("⚙️ Updating default branch...")
+            print("⚙️  Updating default branch...")
             input_flag_cmd = f"rit github update branch default --rit_repo_owner={owner} --rit_git_repo={repository} --rit_repo_branch={branch}"
             os.system(f"{input_flag_cmd}")
 
