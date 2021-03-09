@@ -1,11 +1,20 @@
 # Ritchie Formula
 
-## command
+## Premisses
+
+- Github Account (with generated TOKEN with repository accesses)
+- You will need to set Github credentials when executing the formula or through the `rit set credential` command first.
+
+## Command
 
 ```bash
 rit github update repo
 ```
 
-## description
+## Description
 
-description of formula
+This formula allows the user to update the default branch on all his repositories.
+
+## Demo
+
+<img class="special-img-class" src="/docs/img/rit-github-update-repo.png"/>
