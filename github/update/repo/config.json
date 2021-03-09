@@ -1,0 +1,35 @@
+{
+  "dockerImageBuilder": "cimg/python:3.8",
+  "inputs": [
+    {
+      "name": "rit_git_token",
+      "type": "CREDENTIAL_GITHUB_TOKEN"
+    },
+    {
+      "name": "rit_git_user",
+      "type": "CREDENTIAL_GITHUB_USERNAME"
+    },
+    {
+      "label": "Branch to set as default:",
+      "name": "rit_default_branch",
+      "tutorial": "Ex: dev, qa, test",
+      "type": "text",
+      "required": true,
+      "cache": {
+        "active": true,
+        "qty": 5,
+        "newLabel": "Type new value:"
+      }
+    },
+    {
+      "label": "Repositories to update:",
+      "name": "rit_repos",
+      "type": "text",
+      "required": true,
+      "items": [
+        "All",
+        "I want to select"
+      ]
+    }
+  ]
+}
