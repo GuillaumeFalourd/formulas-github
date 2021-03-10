@@ -15,8 +15,9 @@ rit github create branch
 
 This formula allows the user to create a new branch remotely on a repository he can access, and to set it as default if needed.
 
-If the repository only has one branch, it used as default to create the new one as reference.
-If the repositoy has more than one branch, the user will need to choose which one to use as reference to create the new one.
+If the repository only has one branch, it used as default to create the new one as reference (cf **sample 1**).
+
+If the repositoy has more than one branch, the user will need to choose which one to use as reference to create the new one (cf **sample 2**).
 
 ## Demo
 
