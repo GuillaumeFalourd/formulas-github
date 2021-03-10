@@ -28,8 +28,7 @@ def run(token, owner, repository, branch, default):
         
     if len(shas.keys()) == 1:
         reference = [*shas][0]
-        print(f"⚙️  There is only one branch available on the repository.")
-        print(f"⚙️  Therefore, branch \033[36m{reference}\033[0m will be used as reference.")
+        print(f"⚙️  There is only one branch available on the repository: \033[36m{reference}\033[0m")
     
     # If more than one branch on the repo, ask which one to use as reference
     else:
@@ -42,7 +41,7 @@ def run(token, owner, repository, branch, default):
         answers = inquirer.prompt(questions)
         reference = answers["reference"]
     
-    print(f"⚙️  Creating new \033[36m{branch}\033[0m branch based on \033[36m{reference}\033[0m branch...")
+    print(f"⚙️  Creating \033[36m{branch}\033[0m branch based on \033[36m{reference}\033[0m branch...")
     
     data = {}
     data["ref"] = f"refs/heads/{branch}"
@@ -60,7 +59,7 @@ def run(token, owner, repository, branch, default):
         print(f"✅ Branch \033[36m{branch}\033[0m successfully created on {owner}'s \033[36m{repository}\033[0m repository")
         
         if default == "yes":
-            print("⚙️  Updating default branch...")
+            print(f"⚙️  Updating repository default branch to \033[36m{branch}\033[0m...")
             input_flag_cmd = f"rit github update default-branch --rit_repo_owner={owner} --rit_git_repo={repository} --rit_repo_branch={branch}"
             os.system(f"{input_flag_cmd}")
 
