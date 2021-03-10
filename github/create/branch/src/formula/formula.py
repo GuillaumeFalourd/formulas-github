@@ -25,16 +25,24 @@ def run(token, owner, repository, branch, default):
     for d in datas:
         branch_name = re.search("(?<=refs\/heads\/).*", d["ref"]).group()
         shas[branch_name] = d["object"]["sha"]
+        
+    if len(shas.keys()) == 1:
+        reference = [*shas][0]
+        print(f"⚙️  There is only one branch available on the repository.")
+        print(f"⚙️  Therefore, branch \033[36m{reference}\033[0m will be used as reference.")
     
-    questions = [
-        inquirer.List("reference",
-                message = "\033[1mReference branch\033[0m",
-                choices = shas.keys(),
-            ),
-    ]
-    answers = inquirer.prompt(questions)
-    reference = answers["reference"]
-    print("⚙️  Creating new branch...")
+    # If more than one branch on the repo, ask which one to use as reference
+    else:
+        questions = [
+            inquirer.List("reference",
+                    message = "\033[1mReference branch\033[0m",
+                    choices = shas.keys(),
+                ),
+        ]
+        answers = inquirer.prompt(questions)
+        reference = answers["reference"]
+    
+    print(f"⚙️  Creating new \033[36m{branch}\033[0m branch based on \033[36m{reference}\033[0m branch...")
     
     data = {}
     data["ref"] = f"refs/heads/{branch}"
@@ -57,5 +65,5 @@ def run(token, owner, repository, branch, default):
             os.system(f"{input_flag_cmd}")
 
     else:
-        print("❌ Couldn't create the branch on the repository")
+        print("❌ Couldn't create the \033[36m{branch}\033[0m branch on the repository")
         print (r2.status_code, r2.reason)
