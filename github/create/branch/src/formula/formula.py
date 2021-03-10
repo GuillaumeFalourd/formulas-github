@@ -64,5 +64,5 @@ def run(token, owner, repository, branch, default):
             os.system(f"{input_flag_cmd}")
 
     else:
-        print("❌ Couldn't create the \033[36m{branch}\033[0m branch on the repository")
+        print(f"❌ Couldn't create the \033[36m{branch}\033[0m branch on the repository")
         print (r2.status_code, r2.reason)
