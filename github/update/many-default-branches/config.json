@@ -27,8 +27,8 @@
       "type": "text",
       "required": true,
       "items": [
-        "All",
-        "I want to select"
+        "ALL",
+        "SELECT"
       ]
     }
   ]

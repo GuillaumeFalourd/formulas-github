@@ -8,7 +8,7 @@
 ## Command
 
 ```bash
-rit github update many-default-branch
+rit github update many-default-branches
 ```
 
 ## Description
@@ -20,10 +20,4 @@ This formula allows the user to update the default branch on many o repositories
 
 ## Demo
 
-### Sample 1
-
-<img class="special-img-class" src="/docs/img/rit-github-update-repo-sample-1.png"/>
-
-### Sample 2
-
-<img class="special-img-class" src="/docs/img/rit-github-update-repo-sample-2.png"/>
+<img class="special-img-class" src="/docs/img/rit-github-update-many-default-branches.png"/>

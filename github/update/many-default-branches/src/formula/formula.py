@@ -16,7 +16,7 @@ def run(token, username, default_branch, repos):
     
     all_repositories = get_repositories(url_repos, headers)
 
-    if repos == "all":
+    if repos == "ALL":
         repositories = all_repositories
         
     else: # I want to select
