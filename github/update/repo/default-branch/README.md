@@ -8,7 +8,7 @@
 ## Command
 
 ```bash
-rit github update default-branch
+rit github update repo default-branch
 ```
 
 ## Description
