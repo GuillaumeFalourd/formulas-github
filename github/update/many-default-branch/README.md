@@ -13,7 +13,7 @@ rit github update many-default-branch
 
 ## Description
 
-This formula allows the user to update the default branch on many of his repositories.
+This formula allows the user to update the default branch on many o repositories.
 
 - if the new default branch already exists on the repository, it is set as default directly.
 - if the new default branch doesn't exists on the respository yet, it is created based on another branch (reference), before being set as default.
