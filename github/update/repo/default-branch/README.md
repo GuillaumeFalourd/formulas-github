@@ -17,4 +17,4 @@ This formula allows the user to set a repository branch as default.
 
 ## Demo
 
-<img class="special-img-class" src="/docs/img/rit-github-update-default-branch.png"/>
+<img class="special-img-class" src="/docs/img/rit-github-update-repo-default-branch.png"/>
