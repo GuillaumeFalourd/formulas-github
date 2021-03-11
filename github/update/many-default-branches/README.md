@@ -17,8 +17,8 @@ This formula allows the user to update the default branch on many repositories.
 
 - if the new default branch already exists on the repository, it is set as default directly.
 - if the new default branch doesn't exists on the respository yet, it is created based on another branch (reference), before being set as default:
-  - if there is only one branch on the repository, this branch is automatically used as reference.
-  - if there are more than one branches on the repository, the user has to choose manually which branch to use as reference.
+  - if there is only one branch on the repository, this branch is automatically used as reference to create the new one.
+  - if there are more than one branches on the repository, the user has to choose manually which branch to use as reference to create the new one.
   
 ## Demo
 
