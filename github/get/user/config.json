@@ -5,9 +5,6 @@
       "label": "What Github account do you want to check? ",
       "name": "github_username",
       "type": "text",
-      "items": [
-        "My account"
-      ],
       "tutorial": "Select your account or type someone else user account.",
       "cache": {
           "active": true,
