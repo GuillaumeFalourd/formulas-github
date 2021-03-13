@@ -14,15 +14,6 @@
       "required": true
     },
     {
-      "condition": {
-        "variable":"github_username",
-        "operator":"==",
-        "value":"My account"
-      },
-      "name": "github_username",
-      "type": "CREDENTIAL_GITHUB_USERNAME"
-    },
-    {
       "label": "Do you want to display repositories details? ",
       "name": "repo_details",
       "type": "text",
