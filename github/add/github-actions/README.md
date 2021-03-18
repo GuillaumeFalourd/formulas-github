@@ -20,4 +20,6 @@ This formula allows the user to add Github Actions workflows to a specific local
 
 <img class="special-img-class" src="/docs/img/rit-github-add-github-actions-formula-sample-2.png"/>
 
-<img class="special-img-class" src="/docs/img/rit-github-add-github-actions-formula-sample-2-result.png"/>
+<img class="special-img-class" src="/docs/img/rit-github-add-github-actions-formula-sample-2-result-1.png"/>
+
+<img class="special-img-class" src="/docs/img/rit-github-add-github-actions-formula-sample-2-result-2.png"/>
