@@ -1,0 +1,41 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-python3-builder",
+  "inputs": [
+    {
+      "label": "Path to the project:",
+      "name": "rit_project_path",
+      "type": "path",
+      "required": false,
+      "tutorial": "If empty, current path will be used."
+    },
+    {
+      "label": "Github Actions workflows to add: ",
+      "name": "rit_github_actions_workflows",
+      "type": "multiselect",
+      "required": true,
+      "items": [
+          "Horusec",
+          "Super-Linter"
+      ]
+    },
+    {
+      "label": "Want to create a new branch and commit it?",
+      "name": "rit_new_branch",
+      "type": "text",
+      "items": [
+          "yes",
+          "no"
+      ]
+    },
+    {
+      "condition": {
+            "variable": "rit_new_branch",
+            "operator": "==",
+            "value": "yes"
+      },
+      "label": "New branch name:",
+      "name": "rit_new_branch_name",
+      "type": "text"
+    }
+  ]
+}
