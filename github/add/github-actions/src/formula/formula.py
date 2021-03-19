@@ -3,6 +3,7 @@ import os
 
 from formula import formula_horusec
 from formula import formula_superlinter
+from formula import formula_dependabot
 
 def run(project_path, workflows, new_branch, new_branch_name):
     try:
@@ -29,7 +30,7 @@ def run(project_path, workflows, new_branch, new_branch_name):
     
     except:
         print("❌ Oops, something went wrong. Check the informed inputs first.") 
-        print("⚠️ If the error persists, please, open an ISSUE on the related repository.")
+        print("⚠️  If the error persists, please, open an ISSUE on the related repository.")
         
 def createGithubFolder():
     print("Creating folders...") 
