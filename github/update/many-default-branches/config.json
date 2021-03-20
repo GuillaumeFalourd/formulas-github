@@ -2,11 +2,11 @@
   "dockerImageBuilder": "cimg/python:3.8",
   "inputs": [
     {
-      "name": "rit_git_token",
+      "name": "rit_github_token",
       "type": "CREDENTIAL_GITHUB_TOKEN"
     },
     {
-      "name": "rit_git_user",
+      "name": "rit_github_user",
       "type": "CREDENTIAL_GITHUB_USERNAME"
     },
     {
