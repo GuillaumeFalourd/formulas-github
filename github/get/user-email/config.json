@@ -2,11 +2,11 @@
   "dockerImageBuilder": "ritclizup/rit-python3-builder",
   "inputs": [
     {
-      "name": "rit_git_user",
+      "name": "rit_github_user",
       "type": "CREDENTIAL_GITHUB_USERNAME"
     },
     {
-      "name": "rit_git_token",
+      "name": "rit_github_token",
       "type": "CREDENTIAL_GITHUB_TOKEN"
     },
     {
