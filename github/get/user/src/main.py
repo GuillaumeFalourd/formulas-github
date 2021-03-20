@@ -9,4 +9,4 @@ username = os.environ.get("RIT_GITHUB_USERNAME")
 repo_details = os.environ.get("RIT_REPO_DETAILS")
 keep_file = os.environ.get("RIT_KEEP_FILE")
 
-formula.Run( user, key, username, repo_details, keep_file)
+formula.Run(user, key, username, repo_details, keep_file)
