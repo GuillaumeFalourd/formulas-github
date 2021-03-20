@@ -18,7 +18,7 @@ def run(token, username, repository, collaborator):
         )
 
     if r1.status_code == 204:
-        
+
         r2 = requests.delete(
             url=url,
             headers=headers
