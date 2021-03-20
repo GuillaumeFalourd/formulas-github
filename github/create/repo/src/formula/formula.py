@@ -36,7 +36,7 @@ def run(token, username, repository, private, clone):
 
     if r.status_code == 201:
         print(f"✅ Repository successfully created on \033[36mhttps://github.com/{username}/{repository}\033[0m!")
-        
+
         if clone == "Yes":
             os.system(f"git clone -q https://github.com/{username}/{repository}.git")
             print(f"✅ Repository successfully cloned on the \033[36mcurrent directory\033[0m!")
