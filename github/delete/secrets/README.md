@@ -3,7 +3,7 @@
 ## command
 
 ```bash
-rit github delete secret
+rit github delete secrets
 ```
 
 ## description
