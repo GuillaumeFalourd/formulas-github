@@ -29,12 +29,6 @@ def run(token, owner, repository, secret_name, secret_value):
 
         json_data = json.dumps(data)
 
-        authorization = f"token {token}"
-        headers = {
-            "Accept": "application/vnd.github.v3+json",
-            "Authorization" : authorization,
-            }
-
         r = requests.put(
             url = url_secret,
             data = json_data,
