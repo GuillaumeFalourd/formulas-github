@@ -6,7 +6,7 @@ from nacl import encoding, public
 
 def run(token, owner, repository, secret_name, secret_value):
     url_public_key = f"https://api.github.com/repos/{owner}/{repository}/actions/secrets/public-key"
-    
+
     authorization = f"token {token}"
     headers = {
         "Accept": "application/vnd.github.v3+json",
@@ -17,10 +17,10 @@ def run(token, owner, repository, secret_name, secret_value):
         url = url_public_key,
         headers = headers
         )
-    
+
     if r.status_code == 200:
         key_datas = r.json()
-        
+
         url_secret = f"https://api.github.com/repos/{owner}/{repository}/actions/secrets/{secret_name}"
 
         data = {}
@@ -41,7 +41,7 @@ def run(token, owner, repository, secret_name, secret_value):
         else:
             print("❌ Couldn't add the secret to the repository")
             print (r.status_code, r.reason)
-        
+
     else:
         print("❌ Couldn't get the repository public key")
         print (r.status_code, r.reason)

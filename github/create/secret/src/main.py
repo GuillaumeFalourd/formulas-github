@@ -3,9 +3,9 @@ import os
 
 from formula import formula
 
-token = os.environ.get("RIT_GIT_TOKEN")
+token = os.environ.get("RIT_GITHUB_TOKEN")
 owner = os.environ.get("RIT_REPO_OWNER")
-repository = os.environ.get("RIT_GIT_REPO")
+repository = os.environ.get("RIT_GITHUB_REPO")
 secret_name = os.environ.get("RIT_SECRET_NAME")
 secret_value = os.environ.get("RIT_SECRET_VALUE")
 
