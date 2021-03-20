@@ -2,7 +2,7 @@
   "dockerImageBuilder": "ritclizup/rit-python3-builder",
   "inputs": [
     {
-      "name": "rit_git_token",
+      "name": "rit_github_token",
       "type": "CREDENTIAL_GITHUB_TOKEN"
     },
     {
@@ -19,7 +19,7 @@
     },
     {
       "label": "Repository name:",
-      "name": "rit_git_repo",
+      "name": "rit_github_repo",
       "tutorial": "Ex: ritchie-formulas",
       "type": "text",
       "required": true,
