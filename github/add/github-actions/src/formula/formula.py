@@ -12,34 +12,34 @@ def run(project_path, workflows, new_branch, new_branch_name):
             os.chdir(current_pwd)
         else:
             os.chdir(project_path)
-        
+
         if new_branch == "yes":
             os.system(f"git checkout -b {new_branch_name}")
-            
+
         createGithubFolder()
         createGithubActionsWorkflows(workflows)
-        
+
         if new_branch == "yes":
             os.system(f"git add .")
             os.system("git commit -m \"Add Github Actions Workflows with Ritchie CLI\"")
             os.system(f"git push origin {new_branch_name}")
-        
+
         print("✅ Github Actions workflows successfully added to the project.")
         if new_branch == "yes":
             print(f"✅ Code successfully added and committed to the {new_branch_name} branch.")
-    
+
     except:
-        print("❌ Oops, something went wrong. Check the informed inputs first.") 
+        print("❌ Oops, something went wrong. Check the informed inputs first.")
         print("⚠️  If the error persists, please, open an ISSUE on the related repository.")
-        
+
 def createGithubFolder():
-    print("Creating folders...") 
+    print("Creating folders...")
     if not os.path.exists(".github"):
         os.makedirs(".github")
         os.chdir('.github')
     else:
         os.chdir('.github')
-    
+
     if not os.path.exists("workflows"):
         os.makedirs("workflows")
         os.chdir('workflows')
@@ -47,7 +47,7 @@ def createGithubFolder():
         os.chdir('workflows')
 
 def createGithubActionsWorkflows(workflows):
-    workflows = workflows.split("|")    
+    workflows = workflows.split("|")
     loop = 0
     for w in workflows:
         loop = loop +1
