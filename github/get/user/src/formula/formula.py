@@ -10,7 +10,7 @@ headers = {
     "Accept": "application/vnd.github.v3+json"
     }
 
-def Run(username, repo_details, keep_file, user, key):
+def Run(user, key, username, repo_details, keep_file):
     # Print User details
     try:
         user_details = get_user_details(username) # It's a binary string

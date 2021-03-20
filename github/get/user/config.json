@@ -2,8 +2,16 @@
   "dockerImageBuilder": "cimg/python:3.8",
   "inputs": [
     {
+      "name": "rit_github_username",
+      "type": "CREDENTIAL_GITHUB_USERNAME"
+    },
+    {
+      "name": "rit_github_token",
+      "type": "CREDENTIAL_GITHUB_TOKEN"
+    },
+    {
       "label": "What Github account do you want to check? ",
-      "name": "github_username",
+      "name": "rit_github_username",
       "type": "text",
       "tutorial": "Select your account or type someone else user account.",
       "cache": {
@@ -15,7 +23,7 @@
     },
     {
       "label": "Do you want to display repositories details? ",
-      "name": "repo_details",
+      "name": "rit_repo_details",
       "type": "text",
       "items": [
         "no",
@@ -27,7 +35,7 @@
     },
     {
       "label": "Want to keep a file locally with those informations? ",
-      "name": "keep_file",
+      "name": "rit_keep_file",
       "type": "text",
       "items": [
         "no",
@@ -36,14 +44,6 @@
       "default": "no",
       "tutorial": "A .txt file can be saved on the folder where the formula is executed.",
       "required": false
-    },
-    {
-      "name": "rit_git_username",
-      "type": "CREDENTIAL_GITHUB_USERNAME"
-    },
-    {
-      "name": "rit_git_token",
-      "type": "CREDENTIAL_GITHUB_TOKEN"
     }
   ]
 }
