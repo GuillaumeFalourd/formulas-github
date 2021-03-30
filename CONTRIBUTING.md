@@ -1,6 +1,6 @@
 # Contribution
 
-You're welcome to add some github formulas on the repository.
+You're welcome to add new Github formulas to the repository.
 
 ## New features for the project
 
