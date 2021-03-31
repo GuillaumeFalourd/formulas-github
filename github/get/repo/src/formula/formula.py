@@ -16,9 +16,9 @@ regex_pattern = r"(?<=\+)(.*)"
 def run(user, key, repo_url, contribution):
 
     user_repo = re.sub("https://github.com/","", repo_url)
-    datas = user_repo.split(sep ='/', maxsplit=2)
-    repo_owner = datas[0]
-    repo_name = datas[1]
+    repo_datas = user_repo.split(sep ='/', maxsplit=2)
+    repo_owner = repo_datas[0]
+    repo_name = repo_datas[1]
 
     authorization = f"token {key}"
     headers = {
@@ -31,6 +31,7 @@ def run(user, key, repo_url, contribution):
     repo_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}"
 
     print(f"🐙 Getting insights for {repo_owner}'s {repo_name} repository:")
+
     traffic = requests.get(
         url = repo_url + "/traffic/views",
         headers = headers,
