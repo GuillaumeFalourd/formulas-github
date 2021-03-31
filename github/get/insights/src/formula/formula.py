@@ -5,6 +5,7 @@ import requests
 import re
 import csv
 import os
+import json
 
 def run(token, username, repos):
 
@@ -124,7 +125,8 @@ def get_repositories(url, headers):
 
     datas = r.json()
     for data in datas:
-        repo_name = data["name"]
+        repo_name = data.get("name")
+        #repo_name = data["name"]
         result.append(repo_name)
 
     return result
