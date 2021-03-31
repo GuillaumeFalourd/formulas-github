@@ -123,11 +123,12 @@ def get_repositories(url, headers):
     if "next" in r.links :
         result += get_repositories(r.links["next"]["url"], headers)
 
-    datas = r.json()
+    json_str = json.dumps(r.json())
+    datas = json.loads(json_str)
+
     for data in datas:
-        repo_name = data.get("name")
-        #repo_name = data["name"]
-        result.append(repo_name)
+        name = data["name"]
+        result.append(name)
 
     return result
 
