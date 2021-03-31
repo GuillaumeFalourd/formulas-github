@@ -127,6 +127,8 @@ def get_repositories(url, headers):
         if isinstance(data, dict):
             repo = data["name"]
             result.append(repo)
+        else:
+            print("Data Type:", type(data))
 
     return result
 
