@@ -118,11 +118,14 @@ def get_repositories(url, headers):
         url = url,
         headers = headers
         )
+
     if "next" in r.links :
         result += get_repositories(r.links["next"]["url"], headers)
 
-    for repository in r.json():
-        result.append(repository["name"])
+    datas = r.json()
+    for data in datas:
+        repo_name = data["name"]
+        result.append(repo_name)
 
     return result
 
