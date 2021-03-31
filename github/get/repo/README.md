@@ -14,9 +14,15 @@ rit github get repo
 ## Description
 
 This formula return insights from the informed repository such as:
-- Views
+
+- Views (all and uniques)
 - Contributions
 - Forks
 - Stars
+- Watchers
 
-It can also return contributors details.
+It can also return contributors details if necessary.
+
+## Demo
+
+<img class="special-img-class" src="/docs/img/rit-github-get-repo.png"/>
