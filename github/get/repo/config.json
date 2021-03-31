@@ -11,8 +11,9 @@
     },
     {
       "label": "Github repository URL to observe",
-      "name": "rit_github_repository",
+      "name": "rit_github_repository_url",
       "type": "text",
+      "required": true,
       "tutorial":"Example: https://github.com/GuillaumeFalourd/formulas-insights"
     },
     {

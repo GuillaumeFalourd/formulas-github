@@ -13,32 +13,42 @@ import json
 
 regex_pattern = r"(?<=\+)(.*)"
 
-def Run(user, key, repository, contribution):
-    user_repo = re.sub("https://github.com/","", repository)
+def run(user, key, repo_url, contribution):
+
+    user_repo = re.sub("https://github.com/","", repo_url)
     datas = user_repo.split(sep ='/', maxsplit=2)
-    owner = datas[0]
-    repo = datas[1]
+    repo_owner = datas[0]
+    repo_name = datas[1]
+
+    authorization = f"token {key}"
+    headers = {
+        "Accept": "application/vnd.github.v3+json",
+        "Authorization" : authorization,
+        }
+
     insights = []
     contributors = []
-    base_url = f"https://api.github.com/repos/{owner}/"
+    repo_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}"
 
-    print(f"🐙 Getting insights for {repository}:")
-    repo_url = urljoin(base_url, repo + "/")
+    print(f"🐙 Getting insights for {repo_owner}'s {repo_name} repository:")
     traffic = requests.get(
-        urljoin(repo_url, "traffic/views",), auth=HTTPBasicAuth(user, key),
+        url = repo_url + "/traffic/views",
+        headers = headers,
     ).json()
 
     clones = requests.get(
-        urljoin(repo_url, "traffic/clones",), auth=HTTPBasicAuth(user, key),
+        url = repo_url + "/traffic/clones",
+        headers = headers,
     ).json()
 
     contributors = requests.get(
-        urljoin(repo_url, "contributors",), auth=HTTPBasicAuth(user, key),
+        url = repo_url + "/contributors",
+        headers = headers,
     ).json()
 
-    url = f"https://api.github.com/repos/{owner}/{repo}"
     repo_stats = requests.get(
-        url, auth=HTTPBasicAuth(user, key),
+        url = repo_url,
+        headers = headers,
     ).json()
 
     try:
@@ -73,7 +83,7 @@ def Run(user, key, repository, contribution):
 
     insights.append(
         {
-            "repo": repo,
+            "repo": repo_name,
             "views": views,
             "uniques": uniques,
             "clones": clones,
