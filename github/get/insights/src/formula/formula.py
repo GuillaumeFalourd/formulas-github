@@ -123,24 +123,20 @@ def get_repositories(url, headers):
     if "next" in r.links :
         result += get_repositories(r.links["next"]["url"], headers)
 
+    print("JSON", r.json())
+
     for data in r.json():
         if isinstance(data, dict):
             repo = data["name"]
             result.append(repo)
 
-        elif isinstance(str, dict):
-            print("Data Type STR")
-            json_acceptable_string = data.replace("'", "\"")
-            data = json.loads(json_acceptable_string)
-            repo = data["name"]
-            result.append(repo)
         else:
             print("Data Type:", type(data))
+            print("DATA", data)
             json_acceptable_string = data.replace("'", "\"")
             data = json.loads(json_acceptable_string)
             repo = data["name"]
             result.append(repo)
-
 
     return result
 
