@@ -1,0 +1,23 @@
+{
+  "dockerImageBuilder": "cimg/python:3.8",
+  "inputs": [
+    {
+      "name": "rit_github_token",
+      "type": "CREDENTIAL_GITHUB_TOKEN"
+    },
+    {
+      "name": "rit_github_user",
+      "type": "CREDENTIAL_GITHUB_USERNAME"
+    },
+    {
+      "label": "Repositories to get insights from:",
+      "name": "rit_repos",
+      "type": "text",
+      "required": true,
+      "items": [
+        "ALL",
+        "SELECT"
+      ]
+    }
+  ]
+}
