@@ -21,6 +21,7 @@ This repository contains Ritchie formulas which can be executed by [ritchie-cli]
 - [Delete Github Secrets](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/delete/secrets): `rit github delete secrets`
 - [Delete Github Repository](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/delete/repo): `rit github delete repo`
 - [Get Github Repo Details](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/get/repo): `rit github get repo`
+- [Get Github Repositories Insights](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/get/insights): `rit github get insights`
 - [Create Github Branch](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/create/branch): `rit github create branch`
 - [Update Github Repo Default Branch](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/update/repo/default-branch): `rit github update repo default-branch`
 - [Update Many Github Repo Default Branches](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/update/many-default-branches): `rit github update many-default-branches`
