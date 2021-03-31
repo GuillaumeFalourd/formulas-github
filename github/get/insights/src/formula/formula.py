@@ -127,8 +127,20 @@ def get_repositories(url, headers):
         if isinstance(data, dict):
             repo = data["name"]
             result.append(repo)
+
+        elif isinstance(str, dict):
+            print("Data Type STR")
+            json_acceptable_string = data.replace("'", "\"")
+            data = json.loads(json_acceptable_string)
+            repo = data["name"]
+            result.append(repo)
         else:
             print("Data Type:", type(data))
+            json_acceptable_string = data.replace("'", "\"")
+            data = json.loads(json_acceptable_string)
+            repo = data["name"]
+            result.append(repo)
+
 
     return result
 
