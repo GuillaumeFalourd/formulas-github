@@ -19,8 +19,8 @@ Formula to create a encrypted secret on a specific repository on Github.
 
 ### Formula
 
-<img class="special-img-class" src="/docs/img/rit-github-create-secret.png"/>
+<img class="special-img-class" src="/docs/img/rit-github-add-secret.png"/>
 
 ### Result
 
-<img class="special-img-class" src="/docs/img/rit-github-create-secret-result.png"/>
+<img class="special-img-class" src="/docs/img/rit-github-add-secret-result.png"/>
