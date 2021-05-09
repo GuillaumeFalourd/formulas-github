@@ -2,7 +2,7 @@
 
 # Ritchie Formulas Github
 
-![Rit banner](/docs/img/ritchie-banner.png)
+<img width="944" alt="Title src="https://user-images.githubusercontent.com/22433243/117589478-22fc2b80-b100-11eb-968e-04ddbc767237.png">
 
 ## Documentation
 
