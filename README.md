@@ -4,16 +4,16 @@
 
 <img width="944" alt="title" src="https://user-images.githubusercontent.com/22433243/117589495-34453800-b100-11eb-9878-9e33af7686b4.png">
 
-## Documentation
+## 📚 Documentation
 
 This repository contains Ritchie formulas which can be executed by [ritchie-cli](https://github.com/ZupIT/ritchie-cli).
 
 - [Ritchie CLI documentation](https://docs.ritchiecli.io)
 - [Step by step to create a Github profile with Ritchie CLI](https://bit.ly/devtoritgithubcreateprofile)
 
-## Formulas available on this repository
+## 🔎 Formulas available on this repository
 
-### Repositories
+### 🗃 Repositories
 
 - [Add Github Actions](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/add/github-actions): `rit github add github-actions`
 
@@ -55,7 +55,7 @@ This repository contains Ritchie formulas which can be executed by [ritchie-cli]
 
 *Formula to update (all) repositories default branches from a specific user account*
 
-### Users
+### 🧑‍💻 Users
 
 - [Create Github Profile](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/create/profile): `rit github create profile`
 
@@ -91,9 +91,9 @@ rit add repo --provider="Github" --name="formulas-github" --repoUrl="https://git
 
 Finally, you can check if the repository has been imported correctly by executing the `rit list repo` command.
 
-## Contribute to the repository with your formulas
+## ♻️ Contribute to the repository with your formulas
 
-### Creating formulas
+### 🆕 Creating formulas
 
 1. Fork and clone the repository
 2. Create a branch: `git checkout -b <branch_name>`
@@ -103,7 +103,7 @@ and commit your implementation: `git commit -m '<commit_message>`
 5. Push your branch: `git push origin <project_name>/<location>`
 6. Open a pull request on the repository for analysis.
 
-### Updating Formulas
+### 🆒 Updating Formulas
 
 1. Fork and clone the repository
 2. Create a branch: `git checkout -b <branch_name>`
