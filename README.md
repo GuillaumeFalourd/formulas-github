@@ -79,7 +79,7 @@ This repository contains Ritchie formulas which can be executed by [ritchie-cli]
 
 - [Delete Github Collaborator](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/delete/collaborator): `rit github delete collaborator`
 
-## Use Formulas
+## 📊 Use Formulas
 
 To import this repository, you need [Ritchie CLI installed](https://docs.ritchiecli.io/getting-started/installation)
 
