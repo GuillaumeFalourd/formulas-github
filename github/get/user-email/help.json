@@ -1,4 +1,4 @@
 {
-	"short": "short help placeholder for user-email",
-	"long": "long help placeholder for user-email used by index page and -h"
+	"short": "Formula to get the email associated to a Github username",
+	"long": "Formula to get the email associated to a Github username"
 }
