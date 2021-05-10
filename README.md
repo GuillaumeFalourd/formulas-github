@@ -13,6 +13,8 @@ This repository contains Ritchie formulas which can be executed by [ritchie-cli]
 
 ## Formulas available on this repository
 
+<img width="1011" alt="repo formulas list" src="https://user-images.githubusercontent.com/22433243/117680153-4c13cf00-b187-11eb-86d8-ad2fed42b537.png">
+
 ### Repositories
 
 - [Add Github Actions](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/add/github-actions): `rit github add github-actions`
