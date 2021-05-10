@@ -137,7 +137,7 @@ def create_csv_file(username, insights):
 
     file = open(filename, 'w+', newline ='')
     with file:
-        header = ["Repository", "Views", "Uniques", "Clones", "Contributors", "Forks", "Stars", "Watchers"]
+        header = ["Repository", "Views \n(Last 14 days)", "Uniques \n(Last 14 days)", "Clones \n(Last 14 days)", "Contributors", "Forks", "Stars", "Watchers"]
         writer = csv.DictWriter(file, fieldnames = header)
         writer.writeheader()
 
