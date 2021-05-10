@@ -39,6 +39,10 @@ Finally, you can check if the repository has been imported correctly by executin
 
 *Formula to create a new repository on the user account*
 
+- [Create Github Issue](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/create/issue): `rit github create issue`
+
+*Formula to create a new issue on any repository the PAT has access to*
+
 - [Delete Github Secrets](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/delete/secrets): `rit github delete secrets`
 
 *Formula to delete Secrets from a specific repository*
