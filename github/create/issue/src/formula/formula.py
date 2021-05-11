@@ -11,11 +11,11 @@ def run(token, owner, repository, title, body, labels, assignees):
     data["title"] = title
     data["body"] = body
     
-    if labels is not None:
+    if labels not in (None, ''):
         label_list = format(labels)
         data["labels"] = label_list
     
-    if assignees is not None:
+    if assignees not in (None, ''):
         assignees_list = format(assignees)
         data["assignees"] = assignees_list
 
