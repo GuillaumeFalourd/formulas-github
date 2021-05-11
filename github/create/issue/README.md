@@ -15,6 +15,13 @@ rit github create issue
 
 Formula to create an ISSUE on any repository the PAT has access to.
 
+This formula allows to set:
+
+- The issue title
+- The issue message body
+- The issue labels
+- The issue assignees
+
 ## Demo
 
 <img class="special-img-class" src="/docs/img/rit-github-create-issue.png"/>

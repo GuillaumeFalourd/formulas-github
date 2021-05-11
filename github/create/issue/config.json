@@ -10,14 +10,24 @@
       "name": "rit_github_owner",
       "tutorial": "Ex: octocat",
       "type": "text",
-      "required": true
+      "required": true,
+      "cache": {
+          "active": true,
+          "qty": 3,
+          "newLabel": "New value:"
+      }
     },
     {
       "label": "Repository name:",
       "name": "rit_github_repo",
       "tutorial": "Ex: ritchie-formulas",
       "type": "text",
-      "required": true
+      "required": true,
+      "cache": {
+        "active": true,
+        "qty": 3,
+        "newLabel": "New value:"
+      }
     },
     {
       "label": "Issue title:",
@@ -32,6 +42,20 @@
       "tutorial": "Ex: This error occurred when I tried to...",
       "type": "text",
       "required": true
+    },
+    {
+      "label": "Issue labels:",
+      "name": "rit_issue_labels",
+      "tutorial": "Ex: documentation (if more than one, separate with coma ',')",
+      "type": "text",
+      "required": false
+    },
+    {
+      "label": "Issue assignees:",
+      "name": "rit_issue_assignees",
+      "tutorial": "Ex: octocat (if more than one, separate with coma ',')",
+      "type": "text",
+      "required": false
     }
   ]
 }
