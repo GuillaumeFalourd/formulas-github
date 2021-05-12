@@ -89,6 +89,10 @@ Finally, you can check if the repository has been imported correctly by executin
 
 *Formula to get the email associated to a Github username*
 
+- [Get Github User Billing](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/get/user-billing): `rit github get user-email`
+
+*Formula to get the billing datas associated to the Github username*
+
 - [Add Github Collaborator](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/add/collaborator): `rit github add collaborator`
 
 *Formula to add a new collaborator to a specific repository*
