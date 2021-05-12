@@ -1,0 +1,13 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-shell-bat-builder",
+  "inputs": [
+    {
+      "name": "rit_github_user",
+      "type": "CREDENTIAL_GITHUB_USERNAME"
+    },
+    {
+      "name": "rit_github_token",
+      "type": "CREDENTIAL_GITHUB_TOKEN"
+    }
+  ]
+}
