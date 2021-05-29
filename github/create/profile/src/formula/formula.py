@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 from mdutils.mdutils import MdUtils
 
-title = '<h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Hello World ! </h1>'
+title = '<h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Hello World ! </h1> <hr>'
 resume = 'My name is {}. I work as a {} at {}.'
 
 visitors = '![](http://estruyf-github.azurewebsites.net/api/VisitorHit?user={}&repo={}&countColorcountColor)'
@@ -21,7 +21,7 @@ medium = '<a href="{}"><img src="https://img.shields.io/badge/-Medium-%2312100E?
 
 
 def run(username, name, job, company, hardskills, accounts):
-    mdFile = MdUtils(file_name='README', title=title)
+    mdFile = MdUtils(file_name='README')
 
     add_introduction(mdFile, username, name, job, company)
 
@@ -37,6 +37,9 @@ def run(username, name, job, company, hardskills, accounts):
 
     print('\n✅ \033[1mGithub profile README.md file created successfully for {} user!\033[0m'.format(username))
 
+
+def add_title(mdFile, title):
+    mdFile.new_paragraph(resume.format(title))
 
 def add_introduction(mdFile, username, name, job, company):
     mdFile.new_paragraph(resume.format(name, job, company))
