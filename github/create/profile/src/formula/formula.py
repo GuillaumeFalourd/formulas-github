@@ -23,6 +23,8 @@ medium = '<a href="{}"><img src="https://img.shields.io/badge/-Medium-%2312100E?
 def run(username, name, job, company, hardskills, accounts):
     mdFile = MdUtils(file_name='README')
 
+    add_title(mdFile, title)
+
     add_introduction(mdFile, username, name, job, company)
 
     if hardskills is not None:
