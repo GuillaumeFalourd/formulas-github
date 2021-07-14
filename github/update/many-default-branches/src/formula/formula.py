@@ -22,7 +22,7 @@ def run(token, username, default_branch, repos):
     else: # I want to select
         question1 = [
             inquirer.Checkbox("repositories",
-                    message = f"\033[1m\033[36m{username}\033[0m \033[1mrepository to delete:\033[0m ",
+                    message = f"\033[1m\033[36m{username}\033[0m \033[1mrepository to update:\033[0m ",
                     choices = all_repositories,
                 ),
         ]
