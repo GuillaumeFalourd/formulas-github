@@ -22,4 +22,4 @@ This formula allows the user to update the default branch on many repositories.
   
 ## Demo
 
-<img class="special-img-class" src="/docs/img/rit-github-update-many-default-branches.png"/>
+![rit-github-update-many-default-branches](https://user-images.githubusercontent.com/22433243/125665906-4df7e906-6b83-488b-95d9-2bf76d10961b.png)
