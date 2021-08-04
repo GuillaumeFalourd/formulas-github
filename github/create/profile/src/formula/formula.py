@@ -41,7 +41,7 @@ def run(username, name, job, company, hardskills, accounts):
 
 
 def add_title(mdFile, title):
-    mdFile.new_paragraph(resume.format(title))
+    mdFile.new_paragraph(title)
 
 def add_introduction(mdFile, username, name, job, company):
     mdFile.new_paragraph(resume.format(name, job, company))
