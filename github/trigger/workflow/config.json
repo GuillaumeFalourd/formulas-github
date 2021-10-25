@@ -1,0 +1,46 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-python3-builder",
+  "inputs": [
+    {
+      "name": "rit_github_user",
+      "type": "CREDENTIAL_GITHUB_USERNAME"
+    },
+    {
+      "name": "rit_github_token",
+      "type": "CREDENTIAL_GITHUB_TOKEN"
+    },
+    {
+      "label": "Repository OWNER:",
+      "name": "rit_github_repository_owner",
+      "type": "text",
+      "required": true,
+      "cache": {
+        "active": true,
+        "qty": 5,
+        "newLabel": "Type another owner:"
+  }
+    },
+    {
+      "label": "Repository NAME:",
+      "name": "rit_github_repository_name",
+      "type": "text",
+      "required": true,
+      "cache": {
+        "active": true,
+        "qty": 5,
+        "newLabel": "Type another name:"
+      }
+    },
+    {
+      "items": [
+        "repository_dispatch",
+        "workflow_dispatch"
+      ],
+      "label": "What type of event do you want to trigger?",
+      "name": "rit_workflow_type",
+      "required": false,
+      "tutorial": "Select what you want to automate with Ritchie",
+      "type": "text"
+    }
+  ]
+}
