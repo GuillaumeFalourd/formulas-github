@@ -19,25 +19,31 @@ For the `workflow_dispatch` type, the formula allows to select the workflow and 
 
 ## Demo
 
-### Repository Dispatch without `client_payload`
+### 1️⃣ Repository Dispatch without `client_payload`
 
 <img width="1050" alt="no client payload formula" src="https://user-images.githubusercontent.com/22433243/138753550-77514ffb-cc8d-43c7-9f5a-001b655cb976.png">
 
 <img width="1421" alt="no client payload" src="https://user-images.githubusercontent.com/22433243/138753561-220b4b62-9fa5-4619-bf4a-b3dea4b402ee.png">
 
-### Repository Dispatch with `client_payload`
+* * *
+
+### 2️⃣ Repository Dispatch with `client_payload`
 
 <img width="1059" alt="client payload formula" src="https://user-images.githubusercontent.com/22433243/138753580-25bfc16f-dcf6-45d9-9d41-616ed29f0444.png">
 
 <img width="1423" alt="client payload" src="https://user-images.githubusercontent.com/22433243/138753591-ad9fa656-ad5b-4e3e-b52a-ea148fb21d45.png">
 
-### Workflow Dispatch without inputs
+* * *
+
+### 3️⃣ Workflow Dispatch without inputs
 
 <img width="1253" alt="workflow dipatch no input formula" src="https://user-images.githubusercontent.com/22433243/138753663-11346e8a-a0af-4943-a359-50fed0f98ec4.png">
 
 <img width="1434" alt="workflow dipatch no input" src="https://user-images.githubusercontent.com/22433243/138753679-cfd10584-3185-4aeb-8131-2fe12d6b995c.png">
 
-### Workflow Dispatch with inputs
+* * *
+
+### 4️⃣ Workflow Dispatch with inputs
 
 <img width="1268" alt="workflow dipatch input formula" src="https://user-images.githubusercontent.com/22433243/138753710-5355872f-5a02-4301-8369-ec681d3f06b8.png">
 
