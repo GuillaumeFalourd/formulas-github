@@ -1,6 +1,6 @@
 name: Gitleaks
 
-description: Workflow to detect hardcoded secrets like passwords, api keys, and tokens in git repos.
+# Workflow to detect hardcoded secrets like passwords, api keys, and tokens in git repos.
 
 on: [push, pull_request, workflow_dispatch]
 
