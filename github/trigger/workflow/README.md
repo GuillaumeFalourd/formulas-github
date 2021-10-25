@@ -13,7 +13,7 @@ rit github trigger workflow
 
 ## Description
 
-Formula to trigger through a command line a `repository_dispatch` or a `workflow_dispatch` event on any repository the user has access to, with or without `client_payload` / inputs.
+Formula to trigger through a command line a Github Actions workflow using a `repository_dispatch` or a `workflow_dispatch` event, on any repository the user has access to, with or without `client_payload` / inputs.
 
 For the `workflow_dispatch` type, the formula allows to select the workflow and the branch to trigger during the command execution.
 

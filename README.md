@@ -65,7 +65,7 @@ Finally, you can check if the repository has been imported correctly by executin
 
 - [Trigger Github Actions Workflow](https://github.com/GuillaumeFalourd/formulas-github/blob/master/github/trigger/workflow/README.md): `rit github trigger workflow`
 
-*Formula to trigger through a command line a `repository_dispatch` or a `workflow_dispatch` event on any repository the user has access to, with or without `client_payload` / `inputs`.*
+*Formula to trigger through a command line a Github Actions workflow using a `repository_dispatch` or a `workflow_dispatch` event, on any repository the user has access to, with or without `client_payload` / `inputs`.*
 
 - [Update Github Repo Default Branch](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/update/repo/default-branch): `rit github update repo default-branch`
 
