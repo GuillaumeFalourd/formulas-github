@@ -1,6 +1,6 @@
-[![Security Pipeline](https://github.com/GuillaumeFalourd/formulas-github/actions/workflows/security_pipeline.yml/badge.svg)](https://github.com/GuillaumeFalourd/formulas-github/actions/workflows/security_pipeline.yml) [![Super Linter](https://github.com/GuillaumeFalourd/formulas-github/actions/workflows/super-linter.yml/badge.svg)](https://github.com/GuillaumeFalourd/formulas-github/actions/workflows/super-linter.yml)
-
 # Formulas Github
+
+[![Security Pipeline](https://github.com/GuillaumeFalourd/formulas-github/actions/workflows/security_pipeline.yml/badge.svg)](https://github.com/GuillaumeFalourd/formulas-github/actions/workflows/security_pipeline.yml) [![Super Linter](https://github.com/GuillaumeFalourd/formulas-github/actions/workflows/super-linter.yml/badge.svg)](https://github.com/GuillaumeFalourd/formulas-github/actions/workflows/super-linter.yml)
 
 <img width="944" alt="title" src="https://user-images.githubusercontent.com/22433243/117589495-34453800-b100-11eb-9878-9e33af7686b4.png">
 
