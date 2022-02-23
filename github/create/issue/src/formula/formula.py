@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import requests
 import json
+import sys
 import re
 
 def run(token, owner, repository, title, body, labels, assignees):
@@ -26,19 +27,41 @@ def run(token, owner, repository, title, body, labels, assignees):
         "Accept": "application/vnd.github.v3+json",
         "Authorization" : authorization,
         }
-
-    r = requests.post(
+    
+    r1 = requests.get(
         url=url,
-        data=json_data,
         headers=headers
         )
+    
+    if r1.status_code == 200:
+        issues = r1.json()
+        
+        for issue in issues:
+            if issue["title"] == title:
+                print (f"👀 Issue with the same title already exists on \033[36mhttps://github.com/{owner}/{repository}\033[0m!")
+                print("Please, update the ISSUE title.")
+                sys.exit()   
+            if issue["body"] == body:
+                print (f"👀 Issue with the same description already exists on \033[36mhttps://github.com/{owner}/{repository}\033[0m!")
+                print("Please, update the ISSUE description.")
+                sys.exit()       
 
-    if r.status_code == 201:
-        print(f"✅ Issue successfully created on \033[36mhttps://github.com/{owner}/{repository}\033[0m!")
+        r2 = requests.post(
+            url=url,
+            data=json_data,
+            headers=headers
+            )
 
+        if r2.status_code == 201:
+            print(f"✅ Issue successfully created on \033[36mhttps://github.com/{owner}/{repository}\033[0m!")
+
+        else:
+            print(f"❌ Couldn't create new issue on \033[36mhttps://github.com/{owner}/{repository}")
+            print (r2.status_code, r2.reason, r2.content)
+                    
     else:
-        print(f"❌ Couldn't create new issue on \033[36mhttps://github.com/{owner}/{repository}")
-        print (r.status_code, r.reason, r.content)
+       print(f"❌ Couldn't check issues on \033[36mhttps://github.com/{owner}/{repository}")
+       print (r1.status_code, r1.reason, r1.content)
 
 def format(value):
     return re.sub(' ', '', value).strip().split(",")
