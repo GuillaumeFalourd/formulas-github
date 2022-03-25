@@ -51,6 +51,10 @@ Finally, you can check if the repository has been imported correctly by executin
 
 *Formula to delete a repository from the user account*
 
+- [Delete workflow logs](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/delete/workflow-logs): `rit github delete workflow-logs`
+
+*Formula to delete aall workflow logs from a specific workflow file*
+
 - [Get Github Repo Details](https://github.com/GuillaumeFalourd/formulas-github/tree/master/github/get/repo): `rit github get repo`
 
 *Formula to get datas and contribution insights from a specific repository*
