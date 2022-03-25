@@ -52,7 +52,8 @@ def Run(user, token, owner, repository):
         run_ids = []
 
         for data in datas:
-            run_id = data["id"]
+            print(data)
+            run_id = data.get("id")
             run_ids.append(run_id)
             url_workflow_delete_log = f"{base_url}/repos/{owner}/{repository}/actions/runs/{run_id}"
             r = requests.delete(
