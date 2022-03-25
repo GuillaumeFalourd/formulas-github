@@ -27,9 +27,9 @@ def Run(user, token, owner, repository):
 
         for workflow in r.json().get("workflows"):
             workflow_name = workflow.get("name")
-            workflow_id = workflow.get("id")
+            workflow_yml_file = re.sub(".github/workflows/","", workflow.get("path"))
             result.append(workflow_name)
-            workflows[workflow_name] = workflow_id
+            workflows[workflow_name] = workflow_yml_file
 
         question1 = [
             inquirer.List("workflow_name",
@@ -39,20 +39,19 @@ def Run(user, token, owner, repository):
         ]
         answer = inquirer.prompt(question1)
         workflow_name = answer["workflow_name"]
-        workflow_id = workflows[workflow_name]
-
-        url_list_workflow_runs = f"{base_url}/actions/workflows/{workflow_id}/runs"
+        workflow_yml_file = workflows[workflow_name]
+        
+        url_list_workflow_runs = f"{base_url}/actions/workflows/{workflow_yml_file}/runs"
 
         r = requests.get(
             url = url_list_workflow_runs,
             headers = headers
             )
-
-        datas = r.json().get("workflows_runs")
+        
+        datas = r.json().get("workflow_runs")
         run_ids = []
-
+        
         for data in datas:
-            print(data)
             run_id = data.get("id")
             run_ids.append(run_id)
             url_workflow_delete_log = f"{base_url}/actions/runs/{run_id}"
@@ -62,11 +61,12 @@ def Run(user, token, owner, repository):
             )
 
             if r.status_code == 204:
-                print(f"✅ Workflow \033[36m{workflow_name}\033[0m logs successfully cleaned for on {owner}'s \033[36m{repository}\033[0m repository")
+                print(f"✅ Workflow \033[36m{workflow_name}\033[0m log with ID {run_id} successfully cleaned on {owner}'s \033[36m{repository}\033[0m repository")
 
-        else:
-            print(f"❌ Couldn't clean workflow logs for \033[36m{workflow_name}\033[0m")
-            print (r.status_code, r.reason)
+            if r.status_code != 204:
+                print(f"❌ Couldn't clean workflow log for \033[36m{workflow_name} and run id {run_id}\033[0m")
+                print (r.status_code, r.reason)
+
     else:
         print(f"❌ Couldn't retrieve {owner}'s \033[36m{repository}\033[0m repository workflows.")
         print (r.status_code, r.reason)
