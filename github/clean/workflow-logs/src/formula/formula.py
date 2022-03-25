@@ -32,13 +32,13 @@ def Run(user, token, owner, repository):
             workflows[workflow_name] = workflow_id
 
         question1 = [
-            inquirer.Checkbox("workflow_name",
+            inquirer.prompt("workflow_name",
                     message = f"\033[1mWhich workflow logs to delete:\033[0m ",
                     choices = result,
                 ),
         ]
         answer = inquirer.prompt(question1)
-        workflow_name = answer["workflow_name"][0]
+        workflow_name = answer["workflow_name"]
         workflow_id = workflows[workflow_name]
 
         url_list_workflow_runs = f"https://api.github.com/repos/{owner}/{repository}/actions/workflows/{workflow_id}/runs"
