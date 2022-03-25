@@ -61,12 +61,12 @@ def Run(user, token, owner, repository):
             )
 
             if r.status_code == 204:
-                print(f"✅ Workflow \033[36m{workflow_name}\033[0m log with ID \033[36m{run_id}\033[0m successfully cleaned on {owner}'s \033[36m{repository}\033[0m repository")
+                print(f"✅ Workflow \033[36m{workflow_name}\033[0m log with ID \033[36m{run_id}\033[0m successfully deleted on {owner}'s \033[36m{repository}\033[0m repository")
 
             if r.status_code != 204:
                 print(f"❌ Couldn't clean workflow log for \033[36m{workflow_name}\033[0m and run id \033[36m{run_id}\033[0m")
                 print (r.status_code, r.reason)
-
+                
     else:
         print(f"❌ Couldn't retrieve {owner}'s \033[36m{repository}\033[0m repository workflows.")
         print (r.status_code, r.reason)
