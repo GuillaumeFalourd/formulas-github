@@ -41,21 +41,21 @@ def Run(user, token, owner, repository):
         workflow_name = answer["workflow_name"]
         workflow_id = workflows[workflow_name]
 
-        url_list_workflow_runs = f"https://api.github.com/repos/{owner}/{repository}/actions/workflows/{workflow_id}/runs"
+        url_list_workflow_runs = f"{base_url}/actions/workflows/{workflow_id}/runs"
 
         r = requests.get(
             url = url_list_workflow_runs,
             headers = headers
             )
 
-        datas = r.json()
+        datas = r.json().get("workflows_runs")
         run_ids = []
 
         for data in datas:
             print(data)
             run_id = data.get("id")
             run_ids.append(run_id)
-            url_workflow_delete_log = f"{base_url}/repos/{owner}/{repository}/actions/runs/{run_id}"
+            url_workflow_delete_log = f"{base_url}/actions/runs/{run_id}"
             r = requests.delete(
                 url=url_workflow_delete_log,
                 headers=headers
