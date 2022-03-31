@@ -41,7 +41,7 @@ def Run(user, token, owner, repository):
         workflow_name = answer["workflow_name"]
         workflow_yml_file = workflows[workflow_name]
         
-        url_list_workflow_runs = f"{base_url}/actions/workflows/{workflow_yml_file}/runs"
+        url_list_workflow_runs = f"{base_url}/actions/workflows/{workflow_yml_file}/runs?per_page=100"
 
         r = requests.get(
             url = url_list_workflow_runs,
