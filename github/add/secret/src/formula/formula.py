@@ -11,6 +11,7 @@ def run(token, owner, repository, secret_name, secret_value):
     headers = {
         "Accept": "application/vnd.github.v3+json",
         "Authorization" : authorization,
+        "X-GitHub-Api-Version": "2022-11-28",
         }
 
     r = requests.get(
