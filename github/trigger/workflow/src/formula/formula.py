@@ -7,9 +7,10 @@ import re
 def Run(user, token, owner, repository, workflow_type):
 
     base_url = f"https://api.github.com/repos/{owner}/{repository}"
-    authorization = f"token {token}"
+    authorization = f"Bearer {token}"
     headers = {
         "Accept": "application/vnd.github.v3+json",
+        "X-GitHub-Api-Version: 2022-11-28",
         "Authorization" : authorization,
         }
 
